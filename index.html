@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advay.dev</title>
+    <script defer src="../app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Jost&display=swap" rel="stylesheet">
+    
+    <script type="module" crossorigin src="./assets/index-775646a1.js"></script>
+    <link rel="stylesheet" href="./assets/index-343eb7ea.css">
+  </head>
+
+  <body>
+    <div class="progress-bar-container">
+      <label for="progress-bar">Loading...</label>
+      <label for="progress-bar" style="font-size: 0.75rem;">Best expereinced in full screen</label>
+      <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+
+    <canvas id="bg"></canvas>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            var scrollpos = sessionStorage.getItem('scrollpos');
+            sessionStorage.removeItem('scrollpos');
+            if (scrollpos) window.scrollTo(0, scrollpos);
+        });
+
+        window.onbeforeunload = function(e) {
+            localStorage.setItem('scrollpos', window.scrollY);
+        };
+    </script>
+
+
+    <div id="text-container">
+      <main class="main">
+        <section>
+          <h1>Hi, I'm Advay</h1>
+            <blockquote>
+              Pronounced
+              <button style="border-radius: 5px; background-color: rgb(59, 59, 59); color: rgb(0, 222, 222)" onclick="new Audio('/audio/Pronounciation.m4a').play()">ɐðvɛ</button>
+            </blockquote>
+        </section>
+        
+        
+        <section class="hidden">
+          <h2>I’m a software developer from Dubai! I have a Bachelors of Computer Science from UBC (2021-2024) and a bachelor of Science in Management from The University of Warwick (2018-2021)</h2>
+          <blockquote>
+            I like making
+            <blockquote>
+              <div class="lists">
+                <li class="list hidden">Software project</li>
+                <li class="list hidden">3D models</li>
+                <li class="list hidden">Pixel art</li>
+              </div>
+            </blockquote>
+          </blockquote>
+        </section>
+  
+        <section class="hidden">
+          <blockquote>
+            <h2>Work Experience</h2>
+            <div class="cards">
+              <div class="card hidden">
+              <h3 class="experience-name">
+                Undergraduate Teaching Assistant
+              </h3>
+              <p>
+                UBC Computer Science 121
+              </p>
+              <p>                
+                (Jan 2022 - Present)
+              </p>
+            </div>
+            
+            <div class="card hidden">
+                <h3 class="experience-name">
+                  Software Engineer in Test
+                </h3>
+                <p>
+                  Lifebooster
+                </p>
+                <p>                
+                  (Jan 2023 - Apr 2023) 
+                </p>
+              </div>
+            </div>
+          </blockquote>
+        </section>
+        
+        <section class="hidden">
+            <h2>Projects (Click the Box!)</h2>
+        </section>
+  
+        <section class="hidden">
+          <h2>Click one of the options if you want to reach out!</h2>
+      </section>
+
+      <section class="hidden">
+        We're still in dev but thanks for checking it out!
+      </section>
+  
+        <!-- <section class="hidden">
+          still going?
+        </section>
+  
+        <section class="hidden">
+          What are you looking for?
+        </section>
+  
+        <section class="hidden">
+          No, really, you should stop...
+        </section>
+  
+        <section class="hidden">
+           
+        </section> -->
+  
+      </main>
+    </div>
+
+    <div id="app"></div>
+    
+  </body>
+</html>
