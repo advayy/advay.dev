@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=Nova+Square&family=Pixelify+Sans:wght@400..700&family=Share+Tech+Mono&display=swap');
+
+.anta-regular {
+    font-family: "Anta", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+.pixelify-sans-400 {
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+ }
+
+ .share-tech-mono-regular {
+    font-family: "Share Tech Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .audiowide-regular {
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .nova-square-regular {
+    font-family: "Nova Square", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+:root {
+    --water-gradient: linear-gradient(to bottom, #4b6cb7, #182848); 
+    --primary-color: rgb(59, 56, 53);           
+
+    --primary-gradient: linear-gradient(to bottom,rgb(50, 48, 44), rgb(59, 56, 53));
+
+
+    --background-color: #000000;     
+    --background-gradient: linear-gradient(to right, black, rgb(22, 22, 22), black);
+    
+    
+    --dark-primary: #201e1d;             
+    --darker-primary: #171514;           
+    --light-primary: #917f63;   
+
+
+    --light-primary-gradient: linear-gradient(to bottom,#947f5e, #917f63, #917f63, #947f5e);
+
+    --link-color: #15ff00;           
+    --text-color: #ffffff;             
+    --text-dark-color: #242424;         
+    --text-secondary-dark-color: #3f2e22;
+    --text-date-color: #043e0f; 
+    
+    --highlight-color: #00ff00;  
+
+    --button-color: #444;           
+    --button-hover-color: #555;   
+    --button-pressed-color: #2e2e2e;      
+
+    --image-hover-scale: 1.05;      
+    
+    --shadow-color: rgba(0, 0, 0, 0.1); 
+
+
+    --grid-background-color: #706666;   
+    
+    /* For toggle Button */
+    --toggle-button-text-color: #fff; 
+    --toggle-hover-color: #4CAF50;    
+    --toggle-button-color: #4CAF50;   
+}
+
+.home-gradient {
+    background: var(--background-gradient);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+header * {
+    font-family: 'Anta', sans-serif;
+}
+
+  html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--background-gradient);
+      height: 100%; 
+      margin: 0; 
+  }
+    
+  main {
+      width: 100%;
+      height: 100%;
+  }
+   
+  #Page-Title {
+    font-family: 'Audiowide', sans-serif;
+      text-align: center;
+      padding: 15;
+      background-color: var(--background-gradient);
+      color: var(--text-color);
+  }
+
+  .portfolio-container {
+      height: 100%;
+  }
+  
+  body {
+    font-family: "Share Tech Mono", serif;
+
+    margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+  }
+    
+  header {
+      text-align: center;
+
+      background-color: var(--primary-color);
+      z-index: 20;
+  }
+    
+  nav a {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: var(--dark-primary);
+    color: var(--text-color);
+    margin: 10px 10px;
+    text-decoration: none;
+  }
+
+  nav a.active {
+    background-color: var(--darker-primary);
+    color: var(--highlight-color);
+  }
+    
+ 
+  
+  #pixel-art-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 20px;
+  }
+    
+  #pixel-art-gallery img {
+      width: 100%;
+  }
+    
+  #social-links {
+      text-align: center;
+      margin-top: 40px;
+  }
+    
+  #social-links ul {
+      list-style: none;
+      padding: 0;
+  }
+    
+  #social-links ul li {
+      display: inline;
+      margin: 0 10px;
+  }
+    
+  #social-links ul li a {
+      color: var(--link-color);
+      text-decoration: none;
+  }
+    
+  #social-links ul li a:hover {
+      text-decoration: underline;
+  }
+  
+  /* PROJECTS */
+  
+  #projects {
+    font-family: "Nova Square", serif;
+      max-width: 90%;
+      margin: 20px auto;     
+    padding: 40px;
+  }
+    
+  .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+  }
+    
+  .project-card {
+    background: var(--light-primary-gradient);
+    padding: 20px;
+      border-radius: 8px;
+      color: var(--text-dark-color);
+  }
+    
+  .project-card h3 {
+      margin-top: 0;
+  }
+    
+  .project-card a {
+      color: var(--link-color);
+      text-decoration: none;
+  }
+    
+  .project-card a:hover {
+      text-decoration: underline;
+  }
+  
+  .project-date {
+      font-size: 1.0em;
+      color: var(--text-date-color);
+  }
+    
+  .project-tech {
+      font-size: 0.9em;
+      font-weight: bold;
+      color: var(--text-secondary-color);
+  }
+  
+  /* ABOUT */
+  
+  #about {
+      max-width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: var(--primary-color);
+      border-radius: 8px;
+  }
+    
+  .about-content {
+      display: flex;
+      align-items: top;
+      gap: 20px;
+  }
+    
+  .about-text {
+      flex: 1;
+  }
+    
+  .about-image {
+      flex: 0 0 200px;
+  }
+  
+  #resume {
+      max-width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: var(--primary-color);
+      border-radius: 8px;
+  }
+    
+  .profile-pic {
+      width: 100%;
+      border-radius: 8px;
+  }
+    
+  .skills {
+      margin-top: 20px;
+      
+  }
+    
+  .skills h3 {
+      margin-bottom: 10px;
+  }
+    
+  .skills ul {
+      list-style: none;
+      padding: 0;
+      color: var(--text-dark-color);
+  }
+    
+  .skills ul li {
+background: var(--light-primary-gradient);
+        padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+  }
+    
+  nav {
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;    
+      background: var(--primary-gradient);
+      border-bottom: 2px solid var(--highlight-color);
+  }
+  
+  /* Work Experience and Education Styles */
+  #work-experience, #education {
+        font-family: "Nova Square", serif;
+      margin-top: 20px;
+      color: var(--text-color);
+  }
+    
+  .experience-item, .education-item {
+    background: var(--light-primary-gradient);
+    padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      color: var(--text-dark-color);
+  }
+    
+  .experience-item h3, .education-item h3 {
+      margin-top: 0;
+      color: var(--text-dark-color);
+  }
+    
+  .company, .institution {
+      font-style: italic;
+      color: var(--text-secondary-dark-color);
+  }
+    
+  .date {
+      color: var(--text-date-color);
+  }
+    
+  .experience-item ul, .education-item ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+  }
+    
+  .experience-item ul li, .education-item ul li {
+      margin-bottom: 10px;
+  }
+  
+  .threejs-container {
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--primary-color);
+      overflow: hidden;
+  }
+    
+  .threejs-window {
+      width: 100%;
+      height: 100%;
+      border: none;
+  }
+
+  #aj-model {
+    width: 50%;
+    height: 80%;
+    border: none;
+  }
+
+/* Gallery container */
+.gallery-container {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.sidebar {
+    text-align: center;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.collection {
+    background-color: var(--button-color);
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.collection:hover {
+    background-color: var(--button-hover-color);
+}
+
+.gallery {
+    flex-grow: 1;
+    padding: 1rem;
+    background-color: var(--primary-color);
+
+    border-radius: 20px;
+}
+
+#gallery-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#gallery-info {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--grid-background-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.centered-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: auto;
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid var(--highlight-color); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+#model-viewer-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+#model-viewer canvas {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-gradient);
+    color: var(--text-color);
+}
+
+
+/* 3d things */
+
+.portfolio-container {
+    font-family: "Share Tech Mono", serif;
+    color: var(--text-dark-color);
+    background-color: var(--background-color);
+    display: flex;
+    height: calc(100vh - 100px);
+    padding: 20px;
+    font-size: large;
+  }
+  
+  .model-list {
+    font-family: "Share Tech Mono", serif;
+    text-align: center;
+    background: var(--light-primary-gradient);
+    width: 25%;
+    padding: 20px;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    border-radius: 8px; 
+  }
+  
+  .model-item {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    background-color: var(--button-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .model-item:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  .model-item h3 {
+    margin: 0;
+  }
+  
+  .model-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .viewer-container {
+    width: 50%;
+    height: 50%;
+    background-color:var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #3d-viewer {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .shader-selection {
+    background: var(--light-primary-gradient);
+    width: 25%;
+    padding: 20px;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    border-radius: 8px; 
+  }
+  
+  .shader-selection h3 {
+    text-align: center;
+  }
+  
+  .shader-item {
+    color: var(--text-color);
+    background-color: var(--button-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  
+  .shader-item:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  .shader-item h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .shader-item.active {
+    background-color: var(--button-pressed-color);
+  }
+  
+.toggle-btn {
+    background-color: var(--toggle-button-color); 
+    color: var(--toggle-button-text-color);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Share Tech Mono", serif;
+  }
+  
+  .toggle-btn:hover {
+    background-color: var(--toggle-hover-color);
+  }
+  
+
+  #home-canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+    
+  #hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 10;
+  }
+  
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav a {
+    padding: 12px;
+  }
+}

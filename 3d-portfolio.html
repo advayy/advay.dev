@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="developer-projects.html">Developer Projects</a>
+      <a href="3d-portfolio.html" class="active">3D Portfolio</a>
+      <a href="pixel-art.html">Pixel Art</a>
+    </nav>
+  </header>
+  <main>
+    <section id="Page-Title">
+      <h1>3D Portfolio</h1>
+    </section>
+    <div class="portfolio-container">
+
+      <div class="model-list">
+        <h3>Select Model</h3>
+        <div class="model-item" data-model="assets/models/lotus.glb">
+          <h3>Lotus</h3>
+        </div>
+        <div class="model-item" data-model="assets/models/gellyfish.glb">
+          <h3>Jellyfish</h3>
+        </div>
+        <div class="model-item" data-model="assets/models/pokeball.glb">
+          <h3>Pokeball</h3>
+        </div>
+        <div class="model-item" data-model="assets/models/vivian.glb">
+          <h3>Vivian</h3>
+        </div>
+        <div class="model-item" data-model="assets/models/BMO.glb">
+          <h3>BMO</h3>
+        </div>
+        <div class="model-item" data-model="assets/models/facehugger.glb">
+          <h3>Face Hugger</h3>
+        </div>
+        <div class="model-item" data-model="assets/models/aj-model.glb">
+          <h3>Me!</h3>
+        </div>
+        <div class="model-item" data-model="assets/models/chovy.glb">
+          <h3>Anchovy</h3>
+        </div>
+      </div>
+
+      <div class="viewer-container" id="3d-viewer">
+        <div></div>
+      </div>
+
+      <div class="shader-selection">
+        <h3>Select Shader</h3>
+      <div class="shader-item" data-shader="default">
+          <h3>Default</h3>
+      </div>
+        <div class="shader-item" data-shader="none">
+          <h3>None</h3>
+        </div>
+        <div class="shader-item" data-shader="xray">
+          <h3>X-Ray</h3>
+        </div>
+        <!-- <div class="shader-item" data-shader="blinn_phong">
+          <h3>Phong</h3>
+        </div> -->
+        <div class="shader-item" data-shader="toon">
+          <h3>Toon</h3>
+        </div>
+        <div class="shader-item" data-shader="dots">
+          <h3>Dots</h3>
+        </div>
+
+        <button id="toggle-move" class="toggle-btn">Stop Sphere Movement</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/model-shader-selector.js"></script>
+</body>
+</html>
