@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art Portfolio</title>
+  <link rel="stylesheet" crossorigin href="/advay.dev/assets/styles-CRPNFKsL.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="developer-projects.html">Developer Projects</a>
+      <a href="3d-portfolio.html">3D Portfolio</a>
+      <a href="pixel-art.html" class="active">Pixel Art</a>
+    </nav>
+  </header>
+
+  <section id="Page-Title">
+    <h1>Pixel Art Portfolio</h1>
+  </section>
+  
+  <main class="gallery-container">
+
+    <aside class="sidebar">
+      <h2>Collections</h2>
+      <div class="collection" onclick="loadGallery('Amoebash')">Amoebash</div>
+      <div class="collection" onclick="loadGallery('App-Icons')">App Icons</div>
+      <div class="collection" onclick="loadGallery('Miscellaneous')">Miscellaneous</div>
+    </aside>
+
+    <section class="gallery">
+      <h2 id="gallery-title">Amoebash</h2>
+      <div id="artwork-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="js/pixel-art.js"></script>
+</body>
+</html>
