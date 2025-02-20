@@ -1,0 +1,17 @@
+.gitignore
+
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Build output (this is regenerated on deploy)
+dist/
+
+# Vite and other cache files
+.vite/
+.cache/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
