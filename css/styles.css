@@ -103,6 +103,7 @@ header * {
       background: var(--background-gradient);
       height: 100%; 
       margin: 0; 
+      overflow-x: hidden;
   }
     
   main {
@@ -814,3 +815,27 @@ html {
 }
 
 
+.desktop-only {
+  display: flex;
+}
+
+.mobile-warning {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  margin: 2rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-warning {
+    display: block;
+  }
+}
