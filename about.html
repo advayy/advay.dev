@@ -7,16 +7,19 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About Me</a>
-        <a href="developer-projects.html">Developer Projects</a>
-        <a href="3d-portfolio.html">3D Portfolio</a>
-        <a href="pixel-art.html">Pixel Art</a>
-
-      </nav>  
-  </header>
+<header>
+  <div class="nav-container">
+    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <div class="site-title mobile-only">advay.dev</div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Me</a>
+      <a href="developer-projects.html">Developer Projects</a>
+      <a href="3d-portfolio.html">3D Portfolio</a>
+      <a href="pixel-art.html">Pixel Art</a>
+    </nav>
+  </div>
+</header>
   <main>
     <section id="Page-Title">
       <h1>About Me</h1>
@@ -128,5 +131,7 @@
       </div>
     </section>
   </main>
+    <script type="module" src="js/callOnAll.js"></script>
+
 </body>
 </html>

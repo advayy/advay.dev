@@ -7,16 +7,20 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <nav>
+<header>
+  <div class="nav-container">
+    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <div class="site-title mobile-only">advay.dev</div>
+    <nav id="navbar">
       <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
+      <a href="about.html" >About Me</a>
       <a href="developer-projects.html">Developer Projects</a>
       <a href="3d-portfolio.html" class="active">3D Portfolio</a>
       <a href="pixel-art.html">Pixel Art</a>
     </nav>
-  </header>
-  <main>
+  </div>
+</header> 
+<main>
     <section id="Page-Title">
       <h1>3D Portfolio</h1>
     </section>
@@ -81,5 +85,6 @@
   </main>
 
   <script type="module" src="js/model-shader-selector.js"></script>
+    <script type="module" src="js/callOnAll.js"></script>
 </body>
 </html>
