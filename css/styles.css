@@ -54,13 +54,14 @@
 
     --link-color: #15ff00;           
     --text-color: #ffffff;             
-    --text-dark-color: #242424;         
-    --text-secondary-dark-color: #3f2e22;
-    --text-date-color: #043e0f; 
+    --text-dark-color: #000000;         
+    --text-secondary-dark-color: #082300;
+    --text-date-color: #005e11; 
     --text-date-color-light: #009e1d; 
 
     
     --highlight-color: #00ff00;  
+    --highlight-color2: #008400;  
 
     --button-color: #444;           
     --button-hover-color: #555;   
@@ -71,7 +72,7 @@
     --shadow-color: rgba(0, 0, 0, 0.1); 
 
 
-    --grid-background-color: #706666;   
+    --grid-background-color: #000000;   
     
     /* For toggle Button */
     --toggle-button-text-color: #fff; 
@@ -91,7 +92,7 @@
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    padding: 1rem;
+    /* padding: 1rem; */
     overflow: hidden;
     background: var(--background-gradient);
   }
@@ -109,7 +110,7 @@ html, body {
     min-height: 100vh; /* ensures body fills screen height */
     display: flex;
     flex-direction: column;
-    background: var(--background-gradient);
+    background: var(--background-color);
     overflow-x: hidden;
 }
 
@@ -221,7 +222,7 @@ main {
   color: var(--text-dark-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--highlight-color);
+    /* border: 1px solid var(--highlight-color); */
 
 }
 
@@ -285,7 +286,7 @@ main {
   .game-card {
   background: linear-gradient(to bottom right, var(--game-color-one),  var(--game-color-two)); /* playful warm gradient */
   color: #333;
-  border: 1px solid var(--highlight-color);
+  /* border: 1px solid var(--highlight-color); */
 }
 
 .game-card a {
@@ -375,11 +376,13 @@ background: var(--light-grey);
   .experience-item h3, .education-item h3 {
       margin-top: 0;
       color: var(--text-dark-color);
+      font-size: 1.5rem;
   }
     
   .company, .institution {
       font-style: italic;
       color: var(--text-secondary-dark-color);
+      font-size: 1rem;
   }
     
   .date {
@@ -434,35 +437,45 @@ background: var(--light-grey);
   box-sizing: border-box;
   padding: 1rem;
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
   position: sticky;         /* optional: makes it stay fixed vertically */
   top: 1rem;
   height: fit-content;
+
+  outline: var(--highlight-color);
+  outline-width: 2px;
+  outline-style:solid;
 }
 
 .gallery {
   flex-grow: 1;
   padding: 1rem;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   border-radius: 20px;
   box-sizing: border-box;
   min-width: 0;
+        outline: var(--highlight-color);
+  outline-width: 2px;
+  outline-style:solid;
 }
 
 .collection {
-    background-color: var(--button-color);
+    /* background-color: var(--button-color); */
     border-radius: 8px;
     margin: 0.5rem 0;
     padding: 0.5rem;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease;
+      outline: var(--highlight-color);
+  outline-width: 2px;
+  outline-style:solid;
 }
 
 .collection:hover {
-    background-color: var(--button-hover-color);
+    background-color: var(--highlight-color2);
 }
 
 #gallery-title {
@@ -531,6 +544,8 @@ background: var(--light-grey);
     width: 100%;
 }
 
+
+
 #model-viewer {
     width: 100%;
     height: 100%;
@@ -555,11 +570,17 @@ footer {
   display: flex;
   gap: 20px;
   height: calc(100vh - 100px);
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-family: "Share Tech Mono", serif;
   color: var(--text-dark-color);
   background-color: var(--background-color);
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 2;
 }
+
 
 .model-list,
 .shader-selection {
@@ -567,6 +588,14 @@ footer {
   height: fit-content;
   text-align: center;
 }
+.model-list,
+.shader-selection {
+  width: 300px;
+  z-index: 3;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
 
 .viewer-container {
   flex: 1 1 auto; /* flexible, grows to fill remaining space */
@@ -576,7 +605,14 @@ footer {
   align-items: center;
 }
 
-  
+.viewer-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 100px); /* Full height minus header */
+  z-index: 0;
+}
+
 /* White cut-corner shape for the container */
 .model-list {
   font-family: "Share Tech Mono", serif;
@@ -632,11 +668,11 @@ footer {
 
 
 .model-item:hover {
-  background-color: #222222;
+  background-color: var(--darker-primary);
 }
 
 .model-item.active {
-  background-color: #444444; /* pressed color */
+  background-color: var(--highlight-color2); /* pressed color */
 }
 
 /* If you want the h3 inside model-item to have no margin */
@@ -656,7 +692,14 @@ footer {
     width: 100%;
     height: 100%;
   }
-  
+
+#3d-viewer canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+
 /* White cut-corner shape for the container, cuts on the LEFT */
 .shader-selection {
   background: var(--light-grey2); /* white background */
@@ -708,7 +751,7 @@ footer {
 }
 
 .shader-item:hover {
-  background-color: #222222;
+  background-color: var(--darker-primary);
 }
 
 .shader-item h3 {
@@ -717,7 +760,7 @@ footer {
 }
 
 .shader-item.active {
-  background-color: #444444; /* or var(--button-pressed-color) if defined */
+  background-color: var(--highlight-color2); /* or var(--button-pressed-color) if defined */
 }
   
 .toggle-btn {
@@ -842,11 +885,14 @@ nav#navbar {
     z-index: 99;
     padding: 1rem;
     border-radius: 8px;
-    border: #00ff00;
+    border: var(--highlight-color);
   }
 
   nav#navbar.show {
     display: flex;
+    outline: var(--highlight-color);
+    outline-width: 2px;
+    outline-style:solid;
   }
 
   nav#navbar a {
@@ -1019,9 +1065,9 @@ html {
 
  footer {
   background-color: var(--background-color);
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   text-align: center;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 border-top: 1px solid var(--highlight-color);
 }
 
@@ -1049,7 +1095,7 @@ border-top: 1px solid var(--highlight-color);
   position: relative;
   width: 100%; /* fill container */
   padding: 12px;  /* space between outer and inner */
-  background: var(--highlight-color);
+  background: var(--highlight-color2);
   clip-path: polygon(
     0 0,
     100% 0,
@@ -1060,13 +1106,13 @@ border-top: 1px solid var(--highlight-color);
   box-sizing: border-box;
   border-radius: 0;
   color: #000;
-  box-shadow: 0 0 10px var(--highlight-color);
+  box-shadow: 0 0 10px var(--highlight-color2);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .outer-cut-corner:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 20px var(--highlight-color);
+  box-shadow: 0 0 20px var(--highlight-color2);
 }
 
 .inner-cut-corner {
@@ -1193,7 +1239,7 @@ border-top: 1px solid var(--highlight-color);
 .about-3js-outer {
   flex: 1 1 350px;
   padding: 12px; /* same padding as your other outer-cut-corner */
-  background: var(--highlight-color); /* your highlight color */
+  background: var(--highlight-color2); /* your highlight color */
   clip-path: polygon(
     0 0,
     100% 0,
@@ -1202,7 +1248,7 @@ border-top: 1px solid var(--highlight-color);
     0 calc(100% - 20px)
   );
   box-sizing: border-box;
-  box-shadow: 0 0 10px var(--highlight-color);
+  box-shadow: 0 0 10px var(--highlight-color2);
   border-radius: 0;
   display: flex;
   flex-direction: column;
@@ -1251,13 +1297,14 @@ border-top: 1px solid var(--highlight-color);
   gap: 12px;
   max-width: 1000px; /* Optional max width */
   flex: 1 1 350px;
+  font-size: 1.3rem;
 }
 
 /* Outer container for the 3JS block with new inner & outer cuts */
 .about-3js-outer-new {
   flex: 0 0 auto;
   padding: 16px;
-  background: var(--highlight-color); /* dark background */
+  background: var(--highlight-color2); /* dark background */
   clip-path: polygon(
     0 0,
     100% 0,
@@ -1266,7 +1313,7 @@ border-top: 1px solid var(--highlight-color);
     0 calc(100% - 20px)
   );
   box-sizing: border-box;
-  box-shadow: 0 0 12px #00ff00;
+  box-shadow: 0 0 12px var(--highlight-color2);
   border-radius: 0;
   display: flex;
   flex-direction: column;
@@ -1326,8 +1373,7 @@ border-top: 1px solid var(--highlight-color);
 }
 
 #social-links li a:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--highlight-color2);
   transform: translateY(-4px);
   color: #fff;
 }
-
