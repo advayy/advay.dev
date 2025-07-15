@@ -11,3 +11,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("menu-toggle or navbar not found");
   }
 });
+

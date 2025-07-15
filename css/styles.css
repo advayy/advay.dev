@@ -45,8 +45,8 @@
     --background-gradient: linear-gradient(to right, black, rgb(22, 22, 22), black);
     
     
-    --dark-primary: #201e1d;             
-    --darker-primary: #171514;           
+    --dark-primary: #000000;             
+    --darker-primary: #0a4c00;           
     --light-primary: #917f63;   
 
 
@@ -98,27 +98,28 @@ header * {
     font-family: 'Anta', sans-serif;
 }
 
-  html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--background-gradient);
-      height: 100%; 
-      margin: 0; 
-      overflow-x: hidden;
-  }
-    
-  main {
-      width: 100%;
-      height: 100%;
-  }
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* ensures body fills screen height */
+    display: flex;
+    flex-direction: column;
+    background: var(--background-gradient);
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+}
+
    
   #Page-Title {
     font-family: 'Audiowide', sans-serif;
       text-align: center;
       padding: 15;
-      background-color: var(--background-gradient);
+      /* background-color: var(--background-gradient); */
       color: var(--text-color);
   }
 
@@ -138,7 +139,7 @@ header * {
   header {
       text-align: center;
 
-      background-color: var(--primary-color);
+      background-color: var(--background-color);
       z-index: 20;
   }
     
@@ -205,6 +206,8 @@ header * {
   grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
   gap: 30px;
   justify-content: center;
+    align-items: stretch;
+
 }
 
 .project-card {
@@ -332,7 +335,7 @@ background: var(--light-primary-gradient);
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;    
-      background: var(--primary-gradient);
+      background: var(--background-color);
       /* border-bottom: 2px solid var(--highlight-color); */
   }
   
@@ -692,7 +695,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background: var(--primary-gradient);
+  background: var(--background-color);
   border-bottom: 2px solid var(--highlight-color);
   position: relative;
 }
@@ -744,7 +747,7 @@ nav#navbar {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--primary-gradient);
+    background: var(--background-color);
     position: absolute;
     top: 100%;
     left: 50%;
@@ -753,6 +756,7 @@ nav#navbar {
     z-index: 99;
     padding: 1rem;
     border-radius: 8px;
+    border: #00ff00;
   }
 
   nav#navbar.show {
@@ -926,4 +930,136 @@ html {
   .grid img {
     aspect-ratio: 1 / 1;         /* Maintain square thumbnails */
   }
+}
+
+ footer {
+  background-color: var(--background-color);
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 4rem;
+border-top: 1px solid var(--highlight-color);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--highlight-color);
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.outer-cut-corner {
+  position: relative;
+  width: 100%; /* fill container */
+  padding: 12px;  /* space between outer and inner */
+  background: var(--highlight-color);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    20px 100%,      /* bottom-left cut */
+    0 calc(100% - 20px)
+  );
+  box-sizing: border-box;
+  border-radius: 0;
+  color: #000;
+  box-shadow: 0 0 10px var(--highlight-color);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.outer-cut-corner:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px var(--highlight-color);
+}
+
+.inner-cut-corner {
+  background: var(--background-color);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,  /* top-right cut same as outer padding */
+    100% 12px,
+    100% 100%,
+    20px 100%,            /* bottom-left cut same as outer */
+    0 calc(100% - 20px)
+  );
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 0;
+  color: var(--text-color);
+  font-family: "Nova Square", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Keep your existing styles for text inside inner box */
+
+.inner-cut-corner h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  margin-bottom: 0.4em;
+  color: var(--text-color);
+}
+
+.inner-cut-corner p {
+  margin: 0.4em 0;
+  line-height: 1.5;
+  font-size: 0.95em;
+  color: var(--text-color);
+}
+
+.inner-cut-corner .project-date {
+  color: var(--text-date-color);
+}
+
+.inner-cut-corner .project-tech {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--text-secondary-color);
+  margin-top: 0.4em;
+}
+
+.inner-cut-corner a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.inner-cut-corner a:hover {
+  text-decoration: underline;
+}
+
+/* Outline on images */
+
+.outlined-image {
+  border: 3px solid var(--highlight-color);
+  border-radius: 4px;
+  box-shadow: 0 0 8px var(--highlight-color);
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.project-card, 
+.outer-cut-corner {
+  height: 100%;
+  display: flex; /* make inner-cut-corner flex vertically */
+  flex-direction: column;
+}
+
+.inner-cut-corner {
+  flex-grow: 1; /* take all available space */
+  display: flex;
+  flex-direction: column;
 }

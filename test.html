@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nested Cut Corner Cards</title>
+<style>
+  :root {
+    --highlight-color: #39ff14; /* neon green */
+    --background-color: #1a1a1a; /* dark background */
+  }
+
+  body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  /* Outer card: rectangle with bottom-left corner cut */
+  .outer-card {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    background: var(--highlight-color);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      20px 100%,      /* bottom-left cut */
+      0 calc(100% - 20px)
+    );
+    padding: 20px; /* space for inner card */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Inner card: smaller, with bottom-left and top-right cuts */
+  .inner-card {
+    width: 280px;
+    height: 180px;
+    background: var(--background-color);
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0, /* top-right cut */
+      100% 20px,
+      100% 100%,
+      20px 100%,           /* bottom-left cut */
+      0 calc(100% - 20px)
+    );
+    box-sizing: border-box;
+    padding: 16px;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="outer-card">
+  <div class="inner-card">
+    <h2>Project Title</h2>
+    <p>This is a nested card with a bottom-left cut on the outer card and bottom-left + top-right cuts on the inner card.</p>
+  </div>
+</div>
+
+</body>
+</html>
