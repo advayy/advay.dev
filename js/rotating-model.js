@@ -12,7 +12,7 @@ let model;
 
 function init() {
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x3b3835);
+  scene.background = new THREE.Color(0x000000);
 
   const viewerContainer = document.getElementById('aj-model');
   

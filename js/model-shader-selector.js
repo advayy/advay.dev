@@ -283,8 +283,22 @@ init();
 animate();
 addNeonGrid(20, 20);
 
-document.querySelectorAll('.model-item').forEach((item) => {
+// document.querySelectorAll('.model-item').forEach((item) => {
+//   item.addEventListener('click', () => {
+//     const modelPath = item.getAttribute('data-model');
+//     loadModel(modelPath);
+//   });
+// });
+
+const modelItems = document.querySelectorAll('.model-item');
+
+modelItems.forEach((item) => {
   item.addEventListener('click', () => {
+    // Remove 'active' from all model buttons
+    modelItems.forEach(i => i.classList.remove('active'));
+    // Add 'active' to the clicked button
+    item.classList.add('active');
+
     const modelPath = item.getAttribute('data-model');
     loadModel(modelPath);
   });

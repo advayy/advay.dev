@@ -57,6 +57,8 @@
     --text-dark-color: #242424;         
     --text-secondary-dark-color: #3f2e22;
     --text-date-color: #043e0f; 
+    --text-date-color-light: #009e1d; 
+
     
     --highlight-color: #00ff00;  
 
@@ -73,11 +75,13 @@
     
     /* For toggle Button */
     --toggle-button-text-color: #fff; 
-    --toggle-hover-color: #4CAF50;    
-    --toggle-button-color: #4CAF50;   
+    --toggle-hover-color: #003002;    
+    --toggle-button-color: #015604;   
 
     --game-color-one: #a0a0a0;
     --game-color-two: #787878;
+    --light-grey: #b7b7b7;
+        --light-grey2: #9f9f9f;
 }
 
   .home-gradient {
@@ -237,11 +241,11 @@ main {
   
   .project-date {
       font-size: 1.0em;
-      color: var(--text-date-color);
+      color: var(--text-date-color-light);
   }
 .project-card h3 {
   margin-top: 0;
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin-bottom: 0.4em;
 }
 
@@ -298,7 +302,6 @@ main {
       max-width: 80%;
       margin: 20px auto;
       padding: 20px;
-      background-color: var(--primary-color);
       border-radius: 8px;
   }
     
@@ -323,7 +326,7 @@ main {
   }
     
   .skills ul li {
-background: var(--light-primary-gradient);
+background: var(--light-grey);
         padding: 10px;
       margin-bottom: 5px;
       border-radius: 4px;
@@ -346,13 +349,28 @@ background: var(--light-primary-gradient);
       color: var(--text-color);
   }
     
-  .experience-item, .education-item {
-    background: var(--light-primary-gradient);
-    padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      color: var(--text-dark-color);
-  }
+.experience-item, .education-item {
+  background-color: var(--light-grey2); /* match about-text-card */
+  padding: 20px 24px 20px 20px;
+  margin-bottom: 2rem;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,   /* top-right cut */
+    100% 20px,
+    100% calc(100% - 20px), /* bottom-right cut */
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+  box-sizing: border-box;
+  border-radius: 0;
+  color: #222; /* dark text */
+  font-family: "Nova Square", serif;
+  /* display: flex; */
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
     
   .experience-item h3, .education-item h3 {
       margin-top: 0;
@@ -534,105 +552,173 @@ footer {
 /* 3d things */
 
 .portfolio-container {
-    font-family: "Share Tech Mono", serif;
-    color: var(--text-dark-color);
-    background-color: var(--background-color);
-    display: flex;
-    height: calc(100vh - 100px);
-    padding: 20px;
-    font-size: large;
-  }
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 100px);
+  padding: 20px;
+  font-family: "Share Tech Mono", serif;
+  color: var(--text-dark-color);
+  background-color: var(--background-color);
+}
+
+.model-list,
+.shader-selection {
+  flex: 0 0 25%; /* fixed 25% width */
+  height: fit-content;
+  text-align: center;
+}
+
+.viewer-container {
+  flex: 1 1 auto; /* flexible, grows to fill remaining space */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   
-  .model-list {
-    font-family: "Share Tech Mono", serif;
-    text-align: center;
-    background: var(--light-primary-gradient);
-    width: 25%;
-    padding: 20px;
-    display: flex;
-    height: fit-content;
-    flex-direction: column;
-    border-radius: 8px; 
-  }
-  
-  .model-item {
-    color: var(--text-color);
-    font-size: 0.8rem;
-    background-color: var(--button-color);
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .model-item:hover {
-    background-color: var(--button-hover-color);
-  }
-  
-  .model-item h3 {
-    margin: 0;
-  }
-  
-  .model-item img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .viewer-container {
-    width: 50%;
-    height: 50%;
-    background-color:var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* White cut-corner shape for the container */
+.model-list {
+  font-family: "Share Tech Mono", serif;
+  text-align: center;
+  background: var(--light-grey2); /* white background */
+  width: 25%;
+  padding: 20px;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  border-radius: 0; /* we'll use clip-path for corners */
+  box-sizing: border-box;
+
+  /* White cut-corner polygon */
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,    /* top-right cut */
+    100% 20px,
+    100% calc(100% - 20px), /* bottom-right cut */
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+
+  color: var(--text-dark-color, #222);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Black cut-corner style for the buttons */
+.model-item {
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: 0;
+  box-sizing: border-box;
+
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+  );
+
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.model-item:hover {
+  background-color: #222222;
+}
+
+.model-item.active {
+  background-color: #444444; /* pressed color */
+}
+
+/* If you want the h3 inside model-item to have no margin */
+.model-item h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Keep images fully inside the button shape, with rounded edges */
+.model-item img {
+  width: 100%;
+  border-radius: 0; /* no radius because of clip-path */
+  pointer-events: none; /* prevent interfering with click */
+}
   
   #3d-viewer {
     width: 100%;
     height: 100%;
   }
   
-  .shader-selection {
-    background: var(--light-primary-gradient);
-    width: 25%;
-    padding: 20px;
-    display: flex;
-    height: fit-content;
-    flex-direction: column;
-    border-radius: 8px; 
-  }
-  
-  .shader-selection h3 {
-    text-align: center;
-  }
-  
-  .shader-item {
-    color: var(--text-color);
-    background-color: var(--button-color);
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-  }
-  
-  .shader-item:hover {
-    background-color: var(--button-hover-color);
-  }
-  
-  .shader-item h3 {
-    margin: 0;
-    font-size: 1rem;
-  }
-  
-  .shader-item.active {
-    background-color: var(--button-pressed-color);
-  }
+/* White cut-corner shape for the container, cuts on the LEFT */
+.shader-selection {
+  background: var(--light-grey2); /* white background */
+  width: 25%;
+  padding: 20px;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  border-radius: 0;
+  box-sizing: border-box;
+
+  clip-path: polygon(
+    20px 0,            /* top-left cut */
+    100% 0,
+    100% 100%,
+    20px 100%,         /* bottom-left cut */
+    0 calc(100% - 20px),
+    0 20px
+  );
+
+  color: var(--text-dark-color, #222);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Black cut-corner buttons with cuts on the LEFT */
+.shader-item {
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: 0;
+  box-sizing: border-box;
+
+  clip-path: polygon(
+    10px 0,          /* top-left cut smaller */
+    100% 0,
+    100% 100%,
+    10px 100%,       /* bottom-left cut smaller */
+    0 calc(100% - 10px),
+    0 10px
+  );
+
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shader-item:hover {
+  background-color: #222222;
+}
+
+.shader-item h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.shader-item.active {
+  background-color: #444444; /* or var(--button-pressed-color) if defined */
+}
   
 .toggle-btn {
     background-color: var(--toggle-button-color); 
@@ -797,7 +883,6 @@ nav#navbar {
     max-width: 80%;
     margin: 20px auto;
     padding: 20px;
-    background-color: var(--primary-color);
     border-radius: 8px;
 }
 
@@ -1021,7 +1106,7 @@ border-top: 1px solid var(--highlight-color);
 }
 
 .inner-cut-corner .project-date {
-  color: var(--text-date-color);
+  color: var(--text-date-color-light);
 }
 
 .inner-cut-corner .project-tech {
@@ -1063,3 +1148,186 @@ border-top: 1px solid var(--highlight-color);
   display: flex;
   flex-direction: column;
 }
+
+#about {
+  max-width: 90%;
+  margin: 2rem auto;
+  justify-content: center;
+}
+
+.about-content {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+   flex-wrap: wrap;
+       justify-content: center;
+
+}
+
+/* Left card with light gray background and top-right, bottom-right cut corners */
+.about-card {
+  background-color: #d3d3d3; /* light gray */
+  padding: 2rem;
+  flex: 1 1 350px;
+  box-sizing: border-box;
+
+  /* Cut corners top-right and bottom-right */
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,  /* top-right cut */
+    100% 20px,
+    100% calc(100% - 20px), /* bottom-right cut */
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+  border-radius: 0;
+  
+  /* Optional subtle shadow */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  
+  color: #333;
+  font-family: "Nova Square", serif;
+}
+
+/* 3JS container with outer + inner cut corners as before */
+.about-3js-outer {
+  flex: 1 1 350px;
+  padding: 12px; /* same padding as your other outer-cut-corner */
+  background: var(--highlight-color); /* your highlight color */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    20px 100%,      
+    0 calc(100% - 20px)
+  );
+  box-sizing: border-box;
+  box-shadow: 0 0 10px var(--highlight-color);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inner part */
+.about-3js-inner {
+  background: var(--background-color);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,  
+    100% 12px,
+    100% 100%,
+    20px 100%,            
+    0 calc(100% - 20px)
+  );
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 0;
+  color: var(--text-color);
+  font-family: "Nova Square", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;  /* fill the outer container */
+}
+
+/* Light gray card with top-right & bottom-right cut */
+.about-text-card {
+  background-color: var(--light-grey); /* light gray */
+  padding: 20px 24px 20px 20px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,  /* top-right cut */
+    100% 20px,
+    100% calc(100% - 20px), /* bottom-right cut */
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+  box-sizing: border-box;
+  border-radius: 0;
+  color: #222; /* dark text */
+  font-family: "Nova Square", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 1000px; /* Optional max width */
+  flex: 1 1 350px;
+}
+
+/* Outer container for the 3JS block with new inner & outer cuts */
+.about-3js-outer-new {
+  flex: 0 0 auto;
+  padding: 16px;
+  background: var(--highlight-color); /* dark background */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    20px 100%,      
+    0 calc(100% - 20px)
+  );
+  box-sizing: border-box;
+  box-shadow: 0 0 12px #00ff00;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+}
+
+.about-3js-inner-new {
+  background: #000000; /* darker background */
+  clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,  
+    100% 16px,
+    100% 100%,
+    20px 100%,            
+    0 calc(100% - 20px)
+  );
+  box-sizing: border-box;
+  border-radius: 0;
+  color: #eee; /* light text */
+  font-family: "Nova Square", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  max-height: 100%;
+}
+
+
+#social-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+#social-links li a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: black;
+  color: var(--highlight-color);
+  font-family: "Nova Square", serif;
+  font-weight: 600;
+  text-decoration: none;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,   /* top-right cut */
+    100% 16px,
+    100% 100%,
+    16px 100%,             /* bottom-left cut */
+    0 calc(100% - 16px)
+  );
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 0 8px var(--highlight-color);
+}
+
+#social-links li a:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-4px);
+  color: #fff;
+}
+
