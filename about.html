@@ -4,22 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
-  <script type="module" crossorigin src="./assets/about-CXKMzPX_.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <script type="module" crossorigin src="./assets/about-Dxg_m4WN.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/callOnAll-CD3ICehD.js">
   <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-CmpQ06na.js">
-  <link rel="stylesheet" crossorigin href="./assets/styles-CRPNFKsL.css">
+  <link rel="stylesheet" crossorigin href="./assets/callOnAll-BI2BHaOd.css">
 </head>
 <body>
-  <header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About Me</a>
-        <a href="developer-projects.html">Developer Projects</a>
-        <a href="3d-portfolio.html">3D Portfolio</a>
-        <a href="pixel-art.html">Pixel Art</a>
-
-      </nav>  
-  </header>
+<header>
+  <div class="nav-container">
+    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <div class="site-title mobile-only">Advay.dev</div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Me</a>
+      <a href="developer-projects.html">Developer Projects</a>
+      <a href="3d-portfolio.html">3D Portfolio</a>
+      <a href="pixel-art.html">Pixel Art</a>
+    </nav>
+  </div>
+</header>
   <main>
     <section id="Page-Title">
       <h1>About Me</h1>
@@ -27,18 +30,18 @@
 
     <section id="about">
       <div class="about-content">
-        <div class="about-text">
+        <div class="about-text-card">
           <h2>Hi, I'm Advay!</h2>
           <p>
             I'm a Computer Scientist based in Vancouver. I love learning new things and creating cool stuff. 
-            Over the years, I've explored all kinds of avenues ranging from finance to 3D modeling.       
+            I love making games, software and 3D models.       
           </p>
           <p>
-            When I'm not coding or creating art, you can find me exploring indie games and 
-            experimenting with my 3D printer.
+            When I'm not coding or creating art, you can find me exploring indie titles and 
+            experimenting with new recipes.
           </p>
           <p>
-            On this website you'll find some of my projects, as well as some 3D models and OpenGl shaders among other artwork. 
+            On this website you'll find some of my games, projects, 3D models, OpenGl shaders and pixel artwork. 
             Hope you enjoy it!
           </p>
 
@@ -52,10 +55,13 @@
             </ul>
             </section>  
         </div>
-        <div class="threejs-container" id="aj-model">
+    <div class="about-3js-outer-new">
+      <div class="about-3js-inner-new">
+    <div class="threejs-container" id="aj-model">
           <div></div>
         </div>
 
+<div>
 
 
         </div>
@@ -69,29 +75,27 @@
                   <h3>Developer Co-op</h3>
                   <p class="company">Teck Resources Limited | <span class="date">Jan 2024 - Aug 2024</span></p>
                   <ul>
-                    <li>Built, deployed & maintained ETL pipelines to ingest data from different on-prem sources (SQL, noSQL, API) to the Azure-based enterprise data platform</li>
-                    <li>Reduced team troubleshooting time by leading the development of debugging features for C# data pipelines</li>
-                    <li>Maintained Big Data infrastructure through Terraform for Azure Resource Management (Storage Accounts, Event Hubs)</li>
-                  </ul>
-                </div>
-                <div class="experience-item">
-                  <h3>Undergraduate Teaching Assistant</h3>
-                  <p class="company">University of British Columbia, CPSC121- Models of Computation | <span class="date">Jan 2022 - Dec 2023</span></p>
-                  <ul>
-                    <li>Conducted 3 weekly labs instructing groups of 20 students each on building complex circuits</li>
-                    <li>Held office hours and assessed student work including formal proofs and propositional logic</li>
+                    <li>Improved observability by designing, testing, and pitching C\# debugging features for data pipelines after stakeholder interviews; led end-to-end planning with use cases and implementation strategy</li>
+                    <li>Built and maintained ETL pipelines to ingest on-prem mining and environmental data (SQL, NoSQL, API) into Azure, based on stakeholder requests</li>
+                    <li>Managed Azure Storage Accounts, Event Hubs, and other Big Data infrastructure with Terraform</li>
                   </ul>
                 </div>
                 <div class="experience-item">
                     <h3>Software Engineer in Test</h3>
                     <p class="company">LifeBooster | <span class="date">Jan 2023 - Apr 2023</span></p>
                     <ul>
-                    <li>Accomplished automated comparison of posture and movement graphs for proprietary algorithms, significantly
-                        reducing manual QA efforts through implementing image diffing in Cypress</li>
-                    <li>Advanced agile methodologies within the development team by leading sprint retrospective meetings</li>
-                    <li>Improved developer process, saving 30 minutes per deployment by setting up local integration tests, freeing up
-                        pipelines and reducing wait times</li>
+                    <li>Reduced manual QA by automating posture and movement graph comparisons using Cypress image diffing</li>
+                    <li>Stepped in as interim sprint retrospective lead during manager's short-term leave, supporting agile practices</li>
+                    <li>Revived broken integration tests (from around 50\% to 0\% failures) using Postman and profiling; enabled local integration test runs, saving developers 30+ minutes per deployment</li>
                     </ul>
+                </div>
+                <div class="experience-item">
+                  <h3>Undergraduate Teaching Assistant</h3>
+                  <p class="company">University of British Columbia, CPSC121- Models of Computation | <span class="date">Jan 2022 - Dec 2023</span></p>
+                  <ul>
+                    <li>Taught groups of 20 students in 3 in-person labs each week on propositional logic and building arithmetic circuits</li>
+                    <li>Mentored students one-on-one, explaining and solving logical proofs and math problems from multiple approaches</li>
+                  </ul>
                 </div>
                 </section>
         
@@ -130,5 +134,14 @@
       </div>
     </section>
   </main>
+<footer>
+  <ul class="footer-links">
+    <li><a href="https://github.com/advayy" target="_blank">GitHub</a></li>
+    <li><a href="https://linkedin.com/in/advay-rajguru" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:advayrajguru232000@gmail.com">Email</a></li>
+    <li><a href="https://instagram.com/advay.dev" target="_blank">Instagram</a></li>
+  </ul>
+</footer>
+
 </body>
 </html>

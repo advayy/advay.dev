@@ -4,26 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Portfolio</title>
-  <script type="module" crossorigin src="./assets/3d-portfolio-D8OpHAcA.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <script type="module" crossorigin src="./assets/3d-portfolio-BNJ62mFr.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/callOnAll-CD3ICehD.js">
   <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-CmpQ06na.js">
-  <link rel="stylesheet" crossorigin href="./assets/styles-CRPNFKsL.css">
+  <link rel="stylesheet" crossorigin href="./assets/callOnAll-BI2BHaOd.css">
 </head>
 <body>
-  <header>
-    <nav>
+<header>
+  <div class="nav-container">
+    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <div class="site-title mobile-only">Advay.dev</div>
+    <nav id="navbar">
       <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
+      <a href="about.html" >About Me</a>
       <a href="developer-projects.html">Developer Projects</a>
       <a href="3d-portfolio.html" class="active">3D Portfolio</a>
       <a href="pixel-art.html">Pixel Art</a>
     </nav>
-  </header>
-  <main>
+  </div>
+</header> 
+<main>
     <section id="Page-Title">
       <h1>3D Portfolio</h1>
     </section>
-    <div class="portfolio-container">
+    <div class="portfolio-container desktop-only">
 
       <div class="model-list">
         <h3>Select Model</h3>
@@ -48,9 +52,9 @@
         <div class="model-item" data-model="assets/models/aj-model.glb">
           <h3>Me!</h3>
         </div>
-        <div class="model-item" data-model="assets/models/chovy.glb">
+        <!-- <div class="model-item" data-model="assets/models/chovy.glb">
           <h3>Anchovy</h3>
-        </div>
+        </div> -->
       </div>
 
       <div class="viewer-container" id="3d-viewer">
@@ -81,7 +85,19 @@
         <button id="toggle-move" class="toggle-btn">Stop Sphere Movement</button>
       </div>
     </div>
+    <div class="mobile-warning">
+      <p>This 3D portfolio is best viewed on a desktop or larger screen.</p>
+    </div>
   </main>
 
-</body>
+<footer>
+  <ul class="footer-links">
+    <li><a href="https://github.com/advayy" target="_blank">GitHub</a></li>
+    <li><a href="https://linkedin.com/in/advay-rajguru" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:advayrajguru232000@gmail.com">Email</a></li>
+    <li><a href="https://instagram.com/advay.dev" target="_blank">Instagram</a></li>
+  </ul>
+</footer></body>
+
 </html>
+
