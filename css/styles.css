@@ -75,6 +75,9 @@
     --toggle-button-text-color: #fff; 
     --toggle-hover-color: #4CAF50;    
     --toggle-button-color: #4CAF50;   
+
+    --game-color-one: #a0a0a0;
+    --game-color-two: #787878;
 }
 
   .home-gradient {
@@ -144,7 +147,6 @@ header * {
     padding: 10px 20px;
     background-color: var(--dark-primary);
     color: var(--text-color);
-    margin: 10px 10px;
     text-decoration: none;
   }
 
@@ -196,26 +198,30 @@ header * {
     font-family: "Nova Square", serif;
     max-width: 90%;
     margin: 20px auto;     
-    padding: 40px;
   }
     
   .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
   gap: 30px;
+  justify-content: center;
 }
 
-    
-  .project-card {
-    background: var(--light-primary-gradient);
-    padding: 20px;
-      border-radius: 8px;
-      color: var(--text-dark-color);
-  }
-    
-  .project-card h3 {
-      margin-top: 0;
-  }
+.project-card {
+  background: var(--light-primary-gradient);
+  padding: 16px;
+  border-radius: 12px;
+  color: var(--text-dark-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--highlight-color);
+
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
     
   .project-card a {
       color: var(--link-color);
@@ -230,22 +236,59 @@ header * {
       font-size: 1.0em;
       color: var(--text-date-color);
   }
-    
-  .project-tech {
-      font-size: 0.9em;
-      font-weight: bold;
-      color: var(--text-secondary-color);
-  }
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  margin-bottom: 0.4em;
+}
+
+.project-card p {
+  margin: 0.4em 0;
+  line-height: 1.5;
+  font-size: 0.95em;
+  
+}
+
+.project-tech {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--text-secondary-color);
+  margin-top: 0.4em;
+}
 
 .project-card img.project-image {
   width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover; /* If you don’t want cropping */
+  border-radius: 8px;
   margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  background:var(--light-primary-gradient)
 }
 
 
+  #games {
+    font-family: "Nova Square", serif;
+    max-width: 90%;
+    margin: 20px auto;     
+  }
+
+  .game-card {
+  background: linear-gradient(to bottom right, var(--game-color-one),  var(--game-color-two)); /* playful warm gradient */
+  color: #333;
+  border: 1px solid var(--highlight-color);
+}
+
+.game-card a {
+      color: var(--link-color);
+      text-decoration: none;
+}
+
+.game-card a:hover {
+      text-decoration: underline;
+  }
 
 
   #resume {
@@ -284,7 +327,7 @@ background: var(--light-primary-gradient);
   }
     
   nav {
-      padding: 30px;
+      padding: 25px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -352,17 +395,39 @@ background: var(--light-primary-gradient);
 
 /* Gallery container */
 .gallery-container {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 1.3rem;
-    display: flex;
-    height: calc(100vh - 60px);
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start; /* important */
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 .sidebar {
-    text-align: center;
-    width: 200px;
-    padding: 1rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  width: 200px;             /* fixed width */
+  flex-shrink: 0;           /* don’t shrink when content grows */
+  flex-grow: 0;             /* don’t grow either */
+  box-sizing: border-box;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  position: sticky;         /* optional: makes it stay fixed vertically */
+  top: 1rem;
+  height: fit-content;
+}
+
+.gallery {
+  flex-grow: 1;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .collection {
@@ -377,14 +442,6 @@ background: var(--light-primary-gradient);
 
 .collection:hover {
     background-color: var(--button-hover-color);
-}
-
-.gallery {
-    flex-grow: 1;
-    padding: 1rem;
-    background-color: var(--primary-color);
-
-    border-radius: 20px;
 }
 
 #gallery-title {
@@ -837,5 +894,36 @@ html {
 
   .mobile-warning {
     display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column;      /* Stack sidebar and gallery vertically */
+    align-items: stretch;        /* Let children fill width */
+    padding: 1rem;
+  }
+
+  .sidebar {
+    width: 100%;                 /* Full width on mobile */
+    box-shadow: none;
+    position: static;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .gallery {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller grid items on phones */
+    gap: 0.5rem;
+  }
+
+  .grid img {
+    aspect-ratio: 1 / 1;         /* Maintain square thumbnails */
   }
 }
