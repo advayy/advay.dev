@@ -1380,3 +1380,21 @@ border-top: 1px solid var(--highlight-color);
   transform: translateY(-4px);
   color: #fff;
 }
+
+.project-links {
+  display: flex;
+  gap: 1rem; /* or use margin-right on the first link */
+  margin-top: 0.5rem;
+}
+
+.project-links a {
+  flex: 1; /* Optional: makes buttons equal width */
+  text-align: center;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.project-links a:hover {
+  background-color: var(--darker-primary);
+}
