@@ -73,9 +73,9 @@ const toggleButton = document.getElementById('toggle-move');
 toggleButton.addEventListener('click', () => {
   isSphereMoving = !isSphereMoving;
   if (isSphereMoving) {
-    toggleButton.textContent = 'Stop Sphere Movement';
+    toggleButton.textContent = 'Stop Light Movement';
   } else {
-    toggleButton.textContent = 'Start Sphere Movement';
+    toggleButton.textContent = 'Start Light Movement';
   }
 });
 
