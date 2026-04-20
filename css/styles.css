@@ -378,9 +378,9 @@ footer {
 .threejs-container#aj-model {
   width: 100%;
   max-width: 400px;
-  aspect-ratio: 1 / 1; /* keeps it square */
+  aspect-ratio: 1 / 1;
+  height: 400px; /* Safari fallback */
   margin: 0 auto;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -391,7 +391,6 @@ footer {
   height: 100%;
   border: none;
 }
-
 /* ============================================
    SOCIAL LINKS
    ============================================ */
