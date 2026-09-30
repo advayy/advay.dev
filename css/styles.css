@@ -2038,3 +2038,16 @@ nav a[target="_blank"]:hover::after {
 .post-category {
   margin-bottom: 14px;
 }
+
+/* ============================================
+   FORCE LIGHT MODE
+   ============================================ */
+
+:root {
+  color-scheme: light only;
+}
+
+html {
+  color-scheme: light only;
+  forced-color-adjust: none;
+}
