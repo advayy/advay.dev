@@ -51,7 +51,7 @@ To progress, the player still has to commit a risk: throw the coin, move immedia
 
 ## Environmental communication
 
-*A Mimic Bites Back* is our initiating double entendre: a mimic is a monster that notorously gets attacked as adventurers look for loot, in this game the mimit gets to fight back.
+*A Mimic Bites Back* is our initiating double entendre: a mimic is a monster that notorously gets attacked as adventurers look for loot, in this game the mimic gets to fight back.
 
 Enemies are built from cardboard. Their fronts are painted. Their backs expose the corrugated texture underneath - biting them here does critical damage and thus you're fighting back by biting backs.
 
