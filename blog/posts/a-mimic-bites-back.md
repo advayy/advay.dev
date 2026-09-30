@@ -14,7 +14,6 @@ This meant the game had to make three things true at once:
 2. Positioning behind an enemy requires active choice, not idling patience
 3. The alternative (fighting head-on) has to be possible but costly
 
-
 ## Health and ammunition are the same resource
 
 As a chest, the player has one resource: coins.
@@ -39,6 +38,8 @@ Stealth becoming a spatial problem with visible rules is what makes our backstab
 ![FOV visualization](assets/blog-images/mimic-fov-detection.png)
 
 It also makes baiting possible at all. Baiting requires the player to predict where an enemy will move and when they'll look away. Without a visible FOV, that prediction isn't something the player can make - and the mechanic stops working.
+
+![Enemy-FOV-render](assets/blog-images/mimic-arrow-shot.png)
 
 ## Baiting - repositioning with real risk
 
