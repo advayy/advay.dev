@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp -r assets dist && cp CNAME dist/CNAME",
+    "build": "vite build && cp -r assets dist && cp CNAME dist/CNAME && cp blog/posts.json dist/blog/posts.json && cp -r blog/posts dist/blog/posts",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
