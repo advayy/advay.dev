@@ -1,4 +1,4 @@
-import"./callOnAll-DyVq4ULm.js";async function r(){const a=document.getElementById("blog-list");if(a)try{const l=await(await fetch("blog/posts.json")).json();l.sort((e,s)=>new Date(s.date)-new Date(e.date)),a.innerHTML=l.map(e=>`
+import"./callOnAll-XeKy7lNB.js";async function r(){const a=document.getElementById("blog-list");if(a)try{const l=await(await fetch("blog/posts.json")).json();l.sort((e,s)=>new Date(s.date)-new Date(e.date)),a.innerHTML=l.map(e=>`
   <a class="blog-card" href="blog/post.html?slug=${encodeURIComponent(e.slug)}">
     ${e.category?`<span class="blog-category">${t(e.category)}</span>`:""}
     <h2>${t(e.title)}</h2>
