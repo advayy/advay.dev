@@ -89,4 +89,4 @@ The player chains together the systems:
 *Can I get behind them before they turn back?*
 *Is it worth the coin to shoot instead?*
 
-No single mechanic carries any encounter: four or five simple systems always combine into a solution the player builds themselves. At this standard, the player should feel like they learned the room, not like the game handed them a solution.
+This allowes the player to develop they're own playstyle, stay engaged, and create their own attachment to the game.
