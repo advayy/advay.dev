@@ -10,7 +10,7 @@ Wrapping the world around a trunk means the player loses track of how areas conn
 
 ![Pause Camera Mechanic](assets/blog-images/embark-pause-feat.png)
 
-The feature reads as a photo mode, but what it actually does is hand the player the full awareness of the area, so that their focus can shift to platforming and not guessing the correct path ahead. And because the player can now study the space, we could design routes that required studying.
+The feature allowes the player to fully survey the area, so that their focus can shift to platforming and not guessing the correct path ahead. And because the player can now study the space, we could design routes that required studying.
 
 ## Abilities open routes, they don't gate progress
 
@@ -18,17 +18,15 @@ Progression runs on two abilities: moss climbing and gliding. Both are given at 
 
 ![Hook unlock](assets/blog-images/embark-hook-unlock.png)
 
-A platform the player can't reach in the first minute becomes a "wait, I remember this" moment fifteen minutes later. Gating with sight rather than ability transforms backtracking into recognition.
+Early game climbable platfoms initially just look like decorative moss, but after the relevant movement ability is discovered, the player should realize its an opportunity for backtracking - and go back to discover secrets of the game.
 
 ## Tools for curved geometry
 
-Placing platforms against a curved surface by hand is slow. Each platform has to sit flush against the trunk, and the trunk is always curving away from the camera. Positioning one platform correctly takes about a minute; fifty would take hours we didn't have in a seven-day jam. So I wrote an editor tool that places platforms relative to the tree's surface normal. The platform snaps to the curve wherever it's dropped.
+Placing platforms against a curved surface by hand is slow. Each platform has to sit flush against the trunk, and the trunk is always curving away from the camera. Positioning one platform correctly and testing it, and then repositioning it would take too long for a 7 day game jam. So I wrote an editor tool that places platforms relative to the tree's surface normal. The platform snaps to the curve wherever it's dropped.
 
 ![Platform placement tool](assets/blog-images/embark-platform-tool.png)
 
 Platform inconsistencies would only drive player frustration with the game, therefore a placement tool would make the process of iterating on the game design significantly easier and more consistent.
-
-The tool isn't a technical feature for its own sake. It's the difference between three level iterations and thirty, and on a jam project, iterations-per-hour is the only metric that matters.
 
 ![Greybox with design notes](assets/blog-images/GreyBox-tree-with-notes.png)
 
