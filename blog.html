@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advay.dev</title>
+  <title>Blog — Advay.dev</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_32-wocRvyTm.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_16-1YdstS9w.png">
-  <script type="module" crossorigin src="./assets/main-h5swBNOa.js"></script>
+  <script type="module" crossorigin src="./assets/blog-Clb5dB7D.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/callOnAll-DyVq4ULm.js">
-  <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-yEBxbqr3.js">
   <link rel="stylesheet" crossorigin href="./assets/callOnAll-D66dCOq-.css">
 </head>
 <body>
@@ -18,22 +17,24 @@
     <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
     <div class="site-title mobile-only">Advay.dev</div>
     <nav id="navbar">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
       <a href="developer-projects.html">Projects</a>
       <a href="art.html">Art</a>
       <a href="games.html">Games</a>
-      <a href="blog.html">Blog</a>
+      <a href="blog.html" class="active">Blog</a>
     </nav>
   </div>
 </header>
 
-<main class="home-gradient">
-  <div id="home-canvas"></div>
-  <section id="hero">
-    <h1>Advay Rajguru</h1>
-    <h2>Software Engineer · Game Developer · Artist</h2>
+<main>
+  <section id="Page-Title">
+    <h1>Blog</h1>
   </section>
+
+  <div class="blog-list" id="blog-list">
+    <!-- populated by js/blog-list.js -->
+  </div>
 </main>
 
 
