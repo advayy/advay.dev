@@ -12,7 +12,7 @@ let model;
 
 function init() {
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x000000);
+  scene.background = new THREE.Color(0x3a1e08);
 
   const viewerContainer = document.getElementById('aj-model');
   
@@ -20,7 +20,7 @@ function init() {
   const height = viewerContainer.clientHeight || 500;
 
   camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-  camera.position.set(0, 2, 3.5);
+  camera.position.set(0, 1.8, 3);
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(width, height);
@@ -38,7 +38,7 @@ function init() {
 
 
 function addNeonGrid(size = 10, divisions = 10) {
-  const gridHelper = new THREE.GridHelper(size, divisions, 0x00FF00, 0x00FF00);
+  const gridHelper = new THREE.GridHelper(size, divisions, 0xff8000, 0xff8000);
   gridHelper.material.opacity = 0.6;
   gridHelper.material.transparent = true;
   scene.add(gridHelper);

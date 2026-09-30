@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advay.dev</title>
+  <title>Post — Advay.dev</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_16.png">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
@@ -15,26 +15,28 @@
     <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
     <div class="site-title mobile-only">Advay.dev</div>
     <nav id="navbar">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="developer-projects.html">Projects</a>
-      <a href="art.html">Art</a>
-      <a href="games.html">Games</a>
-      <a href="blog.html">Blog</a>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Me</a>
+      <a href="../developer-projects.html">Projects</a>
+      <a href="../art.html">Art</a>
+      <a href="../games.html">Games</a>
+      <a href="../blog.html" class="active">Blog</a>
     </nav>
   </div>
 </header>
 
-<main class="home-gradient">
-  <div id="home-canvas"></div>
-  <section id="hero">
-    <h1>Advay Rajguru</h1>
-    <h2>Software Engineer · Game Developer · Artist</h2>
-  </section>
+<main>
+  <article class="blog-post" id="blog-post">
+    <a href="../blog.html" class="blog-back">← All posts</a>
+    <h1 id="post-title">Loading…</h1>
+    <p class="post-meta" id="post-meta"></p>
+    <div id="post-body"></div>
+  </article>
 </main>
 
-<script type="module" src="js/main.js"></script>
-<script type="module" src="js/callOnAll.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script type="module" src="../js/blog-post.js"></script>
+<script type="module" src="../js/callOnAll.js"></script>
 
 <footer>
   <ul class="footer-links">

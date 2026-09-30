@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advay.dev</title>
+  <title>Blog — Advay.dev</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_16.png">
   <link rel="stylesheet" href="css/styles.css">
@@ -15,25 +15,27 @@
     <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
     <div class="site-title mobile-only">Advay.dev</div>
     <nav id="navbar">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
       <a href="developer-projects.html">Projects</a>
       <a href="art.html">Art</a>
       <a href="games.html">Games</a>
-      <a href="blog.html">Blog</a>
+      <a href="blog.html" class="active">Blog</a>
     </nav>
   </div>
 </header>
 
-<main class="home-gradient">
-  <div id="home-canvas"></div>
-  <section id="hero">
-    <h1>Advay Rajguru</h1>
-    <h2>Software Engineer · Game Developer · Artist</h2>
+<main>
+  <section id="Page-Title">
+    <h1>Blog</h1>
   </section>
+
+  <div class="blog-list" id="blog-list">
+    <!-- populated by js/blog-list.js -->
+  </div>
 </main>
 
-<script type="module" src="js/main.js"></script>
+<script type="module" src="js/blog-list.js"></script>
 <script type="module" src="js/callOnAll.js"></script>
 
 <footer>

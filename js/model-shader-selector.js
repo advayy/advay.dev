@@ -23,13 +23,36 @@ const toonColor2 = { type: "c", value: new THREE.Color(0.8, 0.1, 0.35) };
 const outlineColor = { type: "c", value: new THREE.Color(0.0, 0.0, 0.0) };
 const ticks = { type: "f", value: 0.0 };
 
-let defaultColor = { color: 0xFFFFFF };
-let backgroundColor = { color: 0x000000 };
+// ---------- Warm palette ----------
+const BG_TOP    = '#ffffff';   // soft cream — top of viewer
+const BG_BOTTOM = '#ffe0b8';   // warmer peach — bottom of viewer
 
+const GRID_COLOR   = 0xff8000;   // neon orange
+const LIGHT_COLOR  = 0xffffff;   // warm yellow sphere
+const SPHERE_COLOR  = 0xff8000;   // warm yellow sphere
+const LIGHT_SCALE  = 1.6;        // bump if the sphere feels too small
+
+let defaultColor = { color: 0xFFFFFF };
+
+// Build a vertical gradient as a canvas texture (scene.background accepts a Texture)
+function makeGradientTexture(topHex, bottomHex) {
+  const canvas = document.createElement('canvas');
+  canvas.width = 2;
+  canvas.height = 512;
+  const ctx = canvas.getContext('2d');
+  const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  grad.addColorStop(0, topHex);
+  grad.addColorStop(1, bottomHex);
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+}
 
 function init() {
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(backgroundColor.color);
+  scene.background = makeGradientTexture(BG_TOP, BG_BOTTOM);   
 
   const viewerContainer = document.getElementById('3d-viewer');
   const width = viewerContainer.clientWidth || 500;
@@ -82,12 +105,17 @@ toggleButton.addEventListener('click', () => {
 
 function createLight() {
   const sphereGeometry = new THREE.SphereGeometry(2, 32, 32);
-  const sphereMaterial = new THREE.MeshBasicMaterial({ color: lightColor.value });
+  const sphereMaterial = new THREE.MeshBasicMaterial({ color: SPHERE_COLOR });
   lightSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
   scene.add(lightSphere);
 
-  light = new THREE.DirectionalLight(0xffffff, 1);
+  // Yellow point of emission — matches the sphere so shading reads consistent
+  light = new THREE.DirectionalLight(LIGHT_COLOR, 7);
   scene.add(light);
+
+  // Optional: soft glow ring around the sphere so it feels emissive
+  const glow = new THREE.PointLight(LIGHT_COLOR, 8, 20, 2);
+  lightSphere.add(glow);
 }
 
 function updateLightPosition() {
@@ -270,10 +298,9 @@ function animate() {
     renderer.render(scene, camera);
   }
   
-  
 function addNeonGrid(size = 10, divisions = 10) {
-  const gridHelper = new THREE.GridHelper(size, divisions, 0x00FF00, 0x00FF00);
-  gridHelper.material.opacity = 0.6;
+  const gridHelper = new THREE.GridHelper(size, divisions, GRID_COLOR, GRID_COLOR);
+  gridHelper.material.opacity = 0.45;
   gridHelper.material.transparent = true;
   scene.add(gridHelper);
 }

@@ -13,14 +13,14 @@
   <div class="nav-container">
     <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
     <div class="site-title mobile-only">Advay.dev</div>
-    <nav id="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About Me</a>
-      <a href="developer-projects.html">Projects</a>
-      <a href="3d-portfolio.html">3D Portfolio</a>
-      <a href="pixel-art.html">Pixel Art</a>
-<a href="https://advay-rajguru.itch.io/" target="_blank" rel="noopener noreferrer">Games</a>    </nav>
-  </div>
+<nav id="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About Me</a>
+  <a href="developer-projects.html">Projects</a>
+  <a href="art.html">Art</a>
+  <a href="games.html">Games</a>
+  <a href="blog.html">Blog</a>
+</nav>  </div>
 </header>
 
 <main>
@@ -63,71 +63,145 @@
     </div>
   </section>
 
-  <section id="resume">
+<section id="resume">
 
-    <section id="work-experience">
-      <h2>Work Experience</h2>
+  <button class="timeline-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="timeline-panel">
+    <span>Experience &amp; Education</span>
+    <span class="toggle-hint">click to expand</span>
+    <span class="toggle-icon" aria-hidden="true">+</span>
+  </button>
 
-      <div class="experience-item">
-        <h3>Software Developer Co-op</h3>
-        <p class="company">Teck Resources Limited | <span class="date">Jan 2024 – Aug 2024</span></p>
-        <ul>
-          <li>Designed and deployed C# observability features (structured logging, alerting) for production data pipelines, cutting mean time-to-detect failures by 15 minutes per incident</li>
-          <li>Built and maintained ETL pipelines ingesting high-volume mining and environmental data from multiple sources (SQL, NoSQL, REST APIs) into Azure cloud infrastructure</li>
-          <li>Provisioned and version-controlled Azure data infrastructure (Storage Accounts, Event Hubs) using Terraform</li>
-          <li>Diagnosed and extended internal Grafana dashboards, increasing monitoring coverage across pipeline stages and accelerating root-cause analysis</li>
-        </ul>
+  <div id="timeline-panel" class="timeline-panel">
+    <div class="timeline-panel-inner">
+  <div class="timeline">
+
+    <div class="timeline-item current">
+    <div class="timeline-content">
+      <div class="timeline-header">
+        <h3>Organizer <span class="timeline-tag community">Current</span></h3>
+        <span class="timeline-date">July 2026 – Present</span>
       </div>
-
-      <div class="experience-item">
-        <h3>Software Engineer in Test Co-op</h3>
-        <p class="company">LifeBooster | <span class="date">Jan 2023 – Apr 2023</span></p>
-        <ul>
-          <li>Implemented automated UI and unit test suites for a workplace safety motion-capture platform using Cypress and JUnit</li>
-          <li>Automated visual regression testing via pixel-level image diffing to validate posture and movement graph rendering, eliminating a category of manual QA effort</li>
-          <li>Eliminated integration test failures from ~50% to ~0% by profiling the local test environment, cutting deployment time by 30+ minutes</li>
-        </ul>
+      <div class="timeline-sub">
+        <span class="timeline-org">BUS Game Devs (BUSGDA)</span>
+        <span class="timeline-location">Vancouver, BC</span>
       </div>
+    </div>
+  </div>
 
-      <div class="experience-item">
-        <h3>Undergraduate Teaching Assistant</h3>
-        <p class="company">University of British Columbia, CPSC121 — Models of Computation | <span class="date">Jan 2022 – Dec 2023</span></p>
-        <ul>
-          <li>Facilitated 3 weekly in-person labs for groups of 20 students, delivering hands-on instruction in circuit design and propositional logic</li>
-          <li>Mentored students one-on-one through complex logical proofs and mathematical reasoning, adapting explanations across multiple problem-solving approaches</li>
-        </ul>
+    <div class="timeline-item current">
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>Game Development Project Lead &amp; Programmer <span class="timeline-tag work">Current</span></h3>
+          <span class="timeline-date">May 2025 – Present</span>
+        </div>
+        <div class="timeline-sub">
+          <span class="timeline-org">Freelance</span>
+          <span class="timeline-location">Vancouver, BC</span>
+        </div>
       </div>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-
-      <div class="education-item">
-        <h3>Bachelor of Computer Science</h3>
-        <p class="institution">University of British Columbia | <span class="date">Sep 2021 – May 2025</span></p>
-        <ul>
-          <li>Relevant coursework: Computer Graphics, Video Game Programming</li>
-        </ul>
-      </div>
-
-      <div class="education-item">
-        <h3>Bachelor of Science in Management with Finance</h3>
-        <p class="institution">University of Warwick | <span class="date">Oct 2018 – Jul 2021</span></p>
-      </div>
-    </section>
-
-    <div class="skills">
-      <h3>Skills & Tools</h3>
-      <ul>
-        <li>Languages: C#, C++, Java, JavaScript, TypeScript, Python, C, HTML, CSS, SQL</li>
-        <li>Frameworks: OpenGL, ThreeJS, React, Node.js, JUnit, Swing, Cypress, pandas, NumPy, Matplotlib, Terraform</li>
-        <li>Tools: Unity, Blender, Git, JIRA, CosmosDB, Azure, Procreate</li>
-      </ul>
     </div>
 
-  </section>
-</main>
+      <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>BSc Computer Science <span class="timeline-tag education">Education</span></h3>
+          <span class="timeline-date">Sep 2021 – May 2025</span>
+        </div>
+        <div class="timeline-sub">
+          <span class="timeline-org">University of British Columbia</span>
+          <span class="timeline-location">Vancouver, BC</span>
+        </div>
+      </div>
+    </div>
 
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>Developer Co-op <span class="timeline-tag work">Work</span></h3>
+          <span class="timeline-date">Jan 2024 – Aug 2024</span>
+        </div>
+        <div class="timeline-sub">
+          <span class="timeline-org">Teck Resources Limited</span>
+          <span class="timeline-location">Vancouver, BC &amp; Calgary, AB</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>Software Engineer in Test Co-op <span class="timeline-tag work">Work</span></h3>
+          <span class="timeline-date">Jan 2023 – Apr 2023</span>
+        </div>
+        <div class="timeline-sub">
+          <span class="timeline-org">LifeBooster</span>
+          <span class="timeline-location">Vancouver, BC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>Undergraduate Teaching Assistant <span class="timeline-tag work">Work</span></h3>
+          <span class="timeline-date">Jan 2022 – Dec 2023</span>
+        </div>
+        <div class="timeline-sub">
+          <span class="timeline-org">University of British Columbia — CPSC121, Models of Computation</span>
+          <span class="timeline-location">Vancouver, BC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>BSc Management with Finance <span class="timeline-tag education">Education</span></h3>
+          <span class="timeline-date">Oct 2018 – Jul 2021</span>
+        </div>
+        <div class="timeline-sub">
+          <span class="timeline-org">University of Warwick, Warwick Business School</span>
+          <span class="timeline-location">Coventry, UK</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>Vice Chair, Student Staff Liaison Committee <span class="timeline-tag leadership">Elected</span></h3>
+          <span class="timeline-date">Nov 2020 – Jul 2021</span>
+        </div>
+        <div class="timeline-sub">
+          <span class="timeline-org">University of Warwick Business School</span>
+          <span class="timeline-location">Coventry, UK</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3>Developmental Executive Member <span class="timeline-tag leadership">Elected</span></h3>
+          <span class="timeline-date">Sep 2018 – Jul 2019</span>
+        </div>
+        <div class="timeline-sub">
+          <span class="timeline-org">University of Warwick Students' Union</span>
+          <span class="timeline-location">Coventry, UK</span>
+        </div>
+      </div>
+    </div>
+
+  </div>    
+  </div>
+  </div>
+
+</section>
+</main>
 <script type="module" src="js/callOnAll.js"></script>
 
 <footer>
