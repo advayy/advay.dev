@@ -1,4 +1,4 @@
-import"./callOnAll-BJ1NXt9b.js";async function g(){const s=document.getElementById("blog-list");if(s)try{const[r,o]=await Promise.all([fetch("blog/posts.json"),fetch("assets/games.json")]),l=await r.json(),n=await o.json(),c=Object.fromEntries(n.map(e=>[e.id,e]));l.sort((e,t)=>new Date(t.date)-new Date(e.date)),s.innerHTML=l.map(e=>{const t=e.gameId?c[e.gameId]:null,i=t?`
+import"./callOnAll-DvltWELv.js";async function g(){const s=document.getElementById("blog-list");if(s)try{const[r,o]=await Promise.all([fetch("blog/posts.json"),fetch("assets/games.json")]),l=await r.json(),n=await o.json(),c=Object.fromEntries(n.map(e=>[e.id,e]));l.sort((e,t)=>new Date(t.date)-new Date(e.date)),s.innerHTML=l.map(e=>{const t=e.gameId?c[e.gameId]:null,i=t?`
         <a class="post-cartridge"
            href="${a(t.itchUrl)}"
            target="_blank"
