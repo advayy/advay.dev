@@ -1,0 +1,51 @@
+[
+  {
+    "id": "mimic",
+    "name": "A Mimic Bites Back",
+    "itchUrl": "https://advay-rajguru.itch.io/A-Mimic-Bites-Back",
+    "description": "An Isometric Dungeon Crawler with a twist",
+    "genre": "Adventure"
+  },
+  {
+    "id": "pocket",
+    "name": "Pocket",
+    "itchUrl": "https://advay-rajguru.itch.io/pocket",
+    "description": "A Strategy Game for the Patch Notes Game Jam",
+    "genre": "Strategy"
+  },
+  {
+    "id": "embark",
+    "name": "Embark",
+    "itchUrl": "https://advay-rajguru.itch.io/embark",
+    "description": "A Cozy 3D Platforming Adventure",
+    "genre": "Platformer"
+  },
+  {
+    "id": "amoebash",
+    "name": "Amoebash",
+    "itchUrl": "https://advay-rajguru.itch.io/amoebash",
+    "description": "A top-down 2D Roguelike built on a Custom Engine",
+    "genre": "Action"
+  },
+  {
+    "id": "spinteger",
+    "name": "Spinteger",
+    "itchUrl": "https://advay-rajguru.itch.io/spinteger",
+    "description": "Enchant your records with Math-e-magic!",
+    "genre": "Puzzle"
+  },
+  {
+    "id": "oh-dam",
+    "name": "Oh Dam!",
+    "itchUrl": "https://advay-rajguru.itch.io/oh-dam",
+    "description": "A 3D Sandbox Game for Vancouver Global Game Jam 2026",
+    "genre": "Simulation"
+  },
+  {
+    "id": "voxel",
+    "name": "Voxel Terrain Demo (Mudskipper)",
+    "itchUrl": "https://advay-rajguru.itch.io/mudskipper-demo",
+    "description": "Real-time voxel sculpting in the browser",
+    "genre": "Tech Demo"
+  }
+]

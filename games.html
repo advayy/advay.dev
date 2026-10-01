@@ -4,22 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Games — Advay.dev</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <link rel="stylesheet" href="css/styles.css">
   <meta name="color-scheme" content="light only">
-<meta name="supported-color-schemes" content="light only">
+  <meta name="supported-color-schemes" content="light only">
 </head>
 <body>
 
 <header>
   <div class="nav-container">
-    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-    <div class="site-title mobile-only">Advay.dev</div>
+    <a href="index.html" class="site-logo">
+<img src="assets/favicon.png" alt="" class="site-logo-img">      <span class="site-title">Advay.dev</span>
+    </a>
     <nav id="navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
-      <a href="developer-projects.html">Projects</a>
-      <a href="art.html">Art</a>
+      <a href="projects.html">Projects</a>
+      <a href="art.html" >Art</a>
       <a href="games.html" class="active">Games</a>
       <a href="blog.html">Blog</a>
     </nav>
@@ -31,89 +33,12 @@
     <h1>Games</h1>
   </section>
 
-  <div class="game-grid">
-
-    <a class="game-cell" href="https://advay-rajguru.itch.io/amoebash" target="_blank" rel="noopener noreferrer">
-      <div class="game-thumb">
-        <img src="assets/images/games/amoebash.png" alt="Amoebash">
-      </div>
-      <div class="game-info">
-        <h3>Amoebash</h3>
-        <p class="game-meta">A top down 2D Roguelike built on a Custom Engine</p>
-        <p class="game-meta"><span class="genre">Action</span></p>
-        <span class="play-badge">Play on Itch.io</span>
-      </div>
-    </a>
-    <a class="game-cell" href="https://advay-rajguru.itch.io/embark" target="_blank" rel="noopener noreferrer">
-      <div class="game-thumb">
-        <img src="assets/images/games/embark.png" alt="Embark">
-      </div>
-      <div class="game-info">
-        <h3>Embark</h3>
-        <p class="game-meta">A Cozy 3D Platforming Adventure in a painted world</p>
-        <p class="game-meta"><span class="genre">Platformer</span></p>
-        <span class="play-badge">Play on Itch.io</span>
-      </div>
-    </a>
-    <a class="game-cell" href="https://advay-rajguru.itch.io/A-Mimic-Bites-Back" target="_blank" rel="noopener noreferrer">
-      <div class="game-thumb">
-        <img src="assets/images/games/mimic.png" alt="A Mimic Bites Back">
-      </div>
-      <div class="game-info">
-        <h3>A Mimic Bites Back</h3>
-        <p class="game-meta">An Isometric Dungeon Crawler with a twist</p>
-        <p class="game-meta"><span class="genre">Adventure</span></p>
-        <span class="play-badge">Play on Itch.io</span>
-      </div>
-    </a>
-    <a class="game-cell" href="https://advay-rajguru.itch.io/mudskipper-demo" target="_blank" rel="noopener noreferrer">
-      <div class="game-thumb">
-        <img src="assets/images/games/voxel.png" alt="Voxel Terrain Demo">
-      </div>
-      <div class="game-info">
-        <h3>Voxel Terrain Demo (Mudskipper)</h3>
-        <p class="game-meta">Real-time voxel sculpting in the browser</p>
-        <p class="game-meta"><span class="genre">Tech Demo</span></p>
-        <span class="play-badge">Play on Itch.io</span>
-      </div>
-    </a>
-    <a class="game-cell" href="https://advay-rajguru.itch.io/pocket" target="_blank" rel="noopener noreferrer">
-      <div class="game-thumb">
-        <img src="assets/images/games/pocket.png" alt="Pocket">
-      </div>
-      <div class="game-info">
-        <h3>Pocket</h3>
-        <p class="game-meta">A Strategy Game for the Patch Notes Game Jam</p>
-        <p class="game-meta"><span class="genre">Strategy</span></p>
-        <span class="play-badge">Play on Itch.io</span>
-      </div>
-    </a>
-    <a class="game-cell" href="https://advay-rajguru.itch.io/spinteger" target="_blank" rel="noopener noreferrer">
-      <div class="game-thumb">
-        <img src="assets/images/games/spinteger.png" alt="Spinteger">
-      </div>
-      <div class="game-info">
-        <h3>Spinteger</h3>
-        <p class="game-meta">Enchant your records with Math-e-magic!</p>
-        <p class="game-meta"><span class="genre">Puzzle</span></p>
-        <span class="play-badge">Play on Itch.io</span>
-      </div>
-    </a>
-    <a class="game-cell" href="https://advay-rajguru.itch.io/oh-dam" target="_blank" rel="noopener noreferrer">
-      <div class="game-thumb">
-        <img src="assets/images/games/oh-dam.png" alt="Oh Dam!">
-      </div>
-      <div class="game-info">
-        <h3>Oh Dam!</h3>
-        <p class="game-meta">A 3D Sandbox Game for Vancouver Global Game Jam 2026</p>
-        <p class="game-meta"><span class="genre">Simulation</span></p>
-        <span class="play-badge">Play on Itch.io</span>
-      </div>
-    </a>
-
+  <div class="game-grid" id="game-grid">
+    <!-- populated by js/games.js -->
   </div>
 </main>
 
+<script type="module" src="js/games.js"></script>
 <script type="module" src="js/callOnAll.js"></script>
 
 <footer>

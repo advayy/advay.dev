@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Post — Advay.dev</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <link rel="stylesheet" href="../css/styles.css">
   <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light only">
 </head>
 <body>
 
-<header>
+  <header>
   <div class="nav-container">
-    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-    <div class="site-title mobile-only">Advay.dev</div>
+    <a href="../index.html" class="site-logo">
+<img src="../assets/favicon.png" alt="" class="site-logo-img">
+      <span class="site-title">Advay.dev</span>
+    </a>
     <nav id="navbar">
       <a href="../index.html">Home</a>
       <a href="../about.html">About Me</a>
-      <a href="../developer-projects.html">Projects</a>
+      <a href="../projects.html">Projects</a>
       <a href="../art.html">Art</a>
       <a href="../games.html">Games</a>
       <a href="../blog.html" class="active">Blog</a>
@@ -29,11 +31,11 @@
 <main>
   <article class="blog-post" id="blog-post">
     <a href="../blog.html" class="blog-back">← All posts</a>
-    <h1 id="post-title">Loading…</h1>
-    <p class="post-meta" id="post-meta"></p>
+    <div class="post-header" id="post-header"></div>
     <div id="post-body"></div>
   </article>
 </main>
+
 
 <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
 <script type="module" src="../js/blog-post.js"></script>

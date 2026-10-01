@@ -4,8 +4,8 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 const container = document.getElementById("home-canvas");
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ alpha: false });
-
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setClearAlpha(0);
 let distanceThreshold = 5;
 let mousePos = new THREE.Vector2(0, 0); 
 
@@ -30,26 +30,25 @@ const scaleFactor = 0.1;
 const ambientLight = new THREE.AmbientLight(0xCCCCCC, 4.0);
 scene.add(ambientLight);
 
-// ---------- Warm gradient palette (matches 3D portfolio) ----------
-const BG_TOP    = '#ffffff';
-const BG_BOTTOM = '#ffe0b8';
+// const BG_TOP    = '#ffffff';
+// const BG_BOTTOM = '#ffe0b8';
 
-function makeGradientTexture(topHex, bottomHex) {
-  const canvas = document.createElement('canvas');
-  canvas.width = 2;
-  canvas.height = 512;
-  const ctx = canvas.getContext('2d');
-  const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  grad.addColorStop(0, topHex);
-  grad.addColorStop(1, bottomHex);
-  ctx.fillStyle = grad;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  const tex = new THREE.CanvasTexture(canvas);
-  tex.colorSpace = THREE.SRGBColorSpace;
-  return tex;
-}
+// function makeGradientTexture(topHex, bottomHex) {
+//   const canvas = document.createElement('canvas');
+//   canvas.width = 2;
+//   canvas.height = 512;
+//   const ctx = canvas.getContext('2d');
+//   const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+//   grad.addColorStop(0, topHex);
+//   grad.addColorStop(1, bottomHex);
+//   ctx.fillStyle = grad;
+//   ctx.fillRect(0, 0, canvas.width, canvas.height);
+//   const tex = new THREE.CanvasTexture(canvas);
+//   tex.colorSpace = THREE.SRGBColorSpace;
+//   return tex;
+// }
 
-scene.background = makeGradientTexture(BG_TOP, BG_BOTTOM);
+// scene.background = makeGradientTexture(BG_TOP, BG_BOTTOM);
 
 const loader = new GLTFLoader();
 loader.load("assets/models/chovy.glb", (gltf) => {
@@ -79,11 +78,10 @@ loader.load("assets/models/chovy.glb", (gltf) => {
         scene.add(model);
     }
 
-    // iterate models and change them all to neon green material
     models.forEach((modelObj) => {
         modelObj.mesh.traverse((child) => {
             if (child.isMesh) {
-                child.material = new THREE.MeshBasicMaterial({ wireframe: true, color: 0xff8000, emissive: 0xff8000, emissiveIntensity: 1.5 });
+                child.material = new THREE.MeshBasicMaterial({ wireframe: true, color: 0xff8000});
             }
         });
     });
@@ -95,7 +93,7 @@ const bubbleCount = 30;
 
 function createBubble() {
     const geometry = new THREE.SphereGeometry(0.1, 16, 16);
-    const material = new THREE.MeshBasicMaterial({ color: 0xffd9a8, emissive: 0xffd9a8, emissiveIntensity: 0.5 });
+    const material = new THREE.MeshBasicMaterial({ color: 0xffd9a8 });
     const bubble = new THREE.Mesh(geometry, material);
 
     bubble.position.set(

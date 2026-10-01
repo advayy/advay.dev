@@ -23,36 +23,34 @@ const toonColor2 = { type: "c", value: new THREE.Color(0.8, 0.1, 0.35) };
 const outlineColor = { type: "c", value: new THREE.Color(0.0, 0.0, 0.0) };
 const ticks = { type: "f", value: 0.0 };
 
-// ---------- Warm palette ----------
-const BG_TOP    = '#ffffff';   // soft cream — top of viewer
-const BG_BOTTOM = '#ffe0b8';   // warmer peach — bottom of viewer
+// const BG_TOP    = '#ffffff';   
+// const BG_BOTTOM = '#ffe0b8';  
 
-const GRID_COLOR   = 0xff8000;   // neon orange
-const LIGHT_COLOR  = 0xffffff;   // warm yellow sphere
-const SPHERE_COLOR  = 0xff8000;   // warm yellow sphere
-const LIGHT_SCALE  = 1.6;        // bump if the sphere feels too small
+const GRID_COLOR   = 0xff8000;  
+const LIGHT_COLOR  = 0xffffff;  
+const SPHERE_COLOR  = 0xff8000;  
+const LIGHT_SCALE  = 1.6;       
 
 let defaultColor = { color: 0xFFFFFF };
 
-// Build a vertical gradient as a canvas texture (scene.background accepts a Texture)
-function makeGradientTexture(topHex, bottomHex) {
-  const canvas = document.createElement('canvas');
-  canvas.width = 2;
-  canvas.height = 512;
-  const ctx = canvas.getContext('2d');
-  const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  grad.addColorStop(0, topHex);
-  grad.addColorStop(1, bottomHex);
-  ctx.fillStyle = grad;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  const tex = new THREE.CanvasTexture(canvas);
-  tex.colorSpace = THREE.SRGBColorSpace;
-  return tex;
-}
+// function makeGradientTexture(topHex, bottomHex) {
+//   const canvas = document.createElement('canvas');
+//   canvas.width = 2;
+//   canvas.height = 512;
+//   const ctx = canvas.getContext('2d');
+//   const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+//   grad.addColorStop(0, topHex);
+//   grad.addColorStop(1, bottomHex);
+//   ctx.fillStyle = grad;
+//   ctx.fillRect(0, 0, canvas.width, canvas.height);
+//   const tex = new THREE.CanvasTexture(canvas);
+//   tex.colorSpace = THREE.SRGBColorSpace;
+//   return tex;
+// }
 
 function init() {
   scene = new THREE.Scene();
-  scene.background = makeGradientTexture(BG_TOP, BG_BOTTOM);   
+  // scene.background = makeGradientTexture(BG_TOP, BG_BOTTOM);   
 
   const viewerContainer = document.getElementById('3d-viewer');
   const width = viewerContainer.clientWidth || 500;
@@ -61,7 +59,8 @@ function init() {
   camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
   camera.position.set(0, 1, 5);
 
-  renderer = new THREE.WebGLRenderer({ antialias: true });
+ renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setClearAlpha(0);
   viewerContainer.appendChild(renderer.domElement);
 
   const ambientLight = new THREE.AmbientLight(lightColor.value, 0.5);
@@ -109,11 +108,9 @@ function createLight() {
   lightSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
   scene.add(lightSphere);
 
-  // Yellow point of emission — matches the sphere so shading reads consistent
   light = new THREE.DirectionalLight(LIGHT_COLOR, 7);
   scene.add(light);
 
-  // Optional: soft glow ring around the sphere so it feels emissive
   const glow = new THREE.PointLight(LIGHT_COLOR, 8, 20, 2);
   lightSphere.add(glow);
 }
@@ -310,20 +307,11 @@ init();
 animate();
 addNeonGrid(20, 20);
 
-// document.querySelectorAll('.model-item').forEach((item) => {
-//   item.addEventListener('click', () => {
-//     const modelPath = item.getAttribute('data-model');
-//     loadModel(modelPath);
-//   });
-// });
-
 const modelItems = document.querySelectorAll('.model-item');
 
 modelItems.forEach((item) => {
   item.addEventListener('click', () => {
-    // Remove 'active' from all model buttons
     modelItems.forEach(i => i.classList.remove('active'));
-    // Add 'active' to the clicked button
     item.classList.add('active');
 
     const modelPath = item.getAttribute('data-model');

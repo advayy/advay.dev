@@ -2,31 +2,34 @@
   {
     "slug": "a-mimic-bites-back",
     "title": "A Mimic Bites Back: Designing Stealth Around the Back-Bite",
-    "date": "2025-11-15",
-    "displayDate": "Nov 2025",
+    "date": "2025-07-15",
+    "displayDate": "Jul 2025",
     "readTime": "7 min read",
     "topic": "Game Design",
     "category": "Game Design",
-    "excerpt": "Making the back-bite the primary solution to every encounter — and building the FOV, baiting, and resource systems to point at it."
-  },
-  {
-    "slug": "embark",
-    "title": "Embark: A 3D Platformer Wrapped Around a Tree, in One Week",
-    "date": "2025-11-08",
-    "displayDate": "Nov 2025",
-    "readTime": "5 min read",
-    "topic": "Level Design",
-    "category": "Game Design",
-    "excerpt": "Making curved, vertical geometry readable — with a free-camera tool for players and a surface-normal tool for the level designer."
+    "excerpt": "Making the back-bite the primary solution to every encounter — and building the FOV, baiting, and resource systems to point at it.",
+    "gameId": "mimic"
   },
   {
     "slug": "pocket",
     "title": "Pocket: A Reverse Tower Defense Where the Bug List Is the Tutorial",
-    "date": "2025-11-01",
-    "displayDate": "Nov 2025",
+    "date": "2025-09-22",
+    "displayDate": "Sep 2025",
     "readTime": "5 min read",
     "topic": "Design",
     "category": "Game Design",
-    "excerpt": "Making the jam theme the game: unsolvable levels, a fake bug tracker as a teaching tool, and a mechanic the player has to feel like they're exploiting."
+    "excerpt": "Making the jam theme the game: unsolvable levels, a fake bug tracker as a teaching tool, and a mechanic the player has to feel like they're exploiting.",
+    "gameId": "pocket"
+  },
+  {
+    "slug": "embark",
+    "title": "Embark: A 3D Platformer Wrapped Around a Tree, in One Week",
+    "date": "2025-08-08",
+    "displayDate": "Aug 2025",
+    "readTime": "5 min read",
+    "topic": "Level Design",
+    "category": "Game Design",
+    "excerpt": "Making curved, vertical geometry readable — with a free-camera tool for players and a surface-normal tool for the level designer.",
+    "gameId": "embark"
   }
 ]
