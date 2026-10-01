@@ -4,6 +4,7 @@ async function loadPost() {
   const headerEl = document.getElementById('post-header');
   const bodyEl = document.getElementById('post-body');
 
+
   if (!slug) {
     headerEl.innerHTML = '<h1>Post not found</h1>';
     bodyEl.innerHTML = '<p>No slug provided.</p>';
@@ -63,6 +64,22 @@ async function loadPost() {
     }
 
     const md = await mdRes.text();
+
+      const schema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "datePublished": post.date,
+      "author": { "@id": "https://advay.dev/#person" },
+      "publisher": { "@id": "https://advay.dev/#person" },
+      "mainEntityOfPage": `https://advay.dev/blog/post.html?slug=${slug}`
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+
 
     marked.setOptions({ breaks: false, gfm: true, headerIds: false, mangle: false });
     let html = marked.parse(md);
