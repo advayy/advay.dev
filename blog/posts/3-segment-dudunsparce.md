@@ -6,7 +6,7 @@ In the Pokémon games Scarlet and Violet (SV), a new evolution was released for 
 
 ![Dunsparce Evolution](/assets/blog-images/dudunsparce-evo-chart.jpeg)
 
-The odds for a shiny 3-segment Dudunsparce are  **1 in 409,600** . I bring the odds of a shiny down to about  **1 in 8** , and the odds of a shiny Hardy Dunsparce — which will evolve into a 3-segment Dudunsparce — down to about  **1 in 38.** 
+The odds for a shiny 3-segment Dudunsparce are  **1 in 409,600**. I bring the odds of a shiny down to about  **1 in 8**, and the odds of a shiny Hardy Dunsparce — which will evolve into a 3-segment Dudunsparce — down to about  **1 in 38.**
 
 ***That’s an improvement from roughly 0.000244% (1 in 409,600) to about 2.63% (1 in 38), or about 10,779× more likely.***
 
@@ -22,20 +22,20 @@ In the Generation 4 games (Diamond, Pearl, Platinum, HeartGold, SoulSilver), if 
 
 Pokémon with the Cute Charm ability force a 66.7% chance that any wild encounter will be of the opposite gender. To force this gender ratio, the game restricts the opposing Pokémon's Personality Value (PID) to one of 25 specific preset values. Under normal circumstances, a Pokémon's Personality Value (PID) is a 32-bit integer. This means there are 2^32, or exactly 4,294,967,296 possible PID combinations. When the Cute Charm ability activates (which happens 66.7% of the time), it completely bypasses the standard 4.3-billion random PID permutations. Instead, the game's code defaults to a pool of only 25 fixed PID values (one for each Nature) to force the correct gender ratio. **This reduces the problem space of what PID you can get by roughly 171.8 million times.**
 
-A Pokémon is shiny if your public Trainer ID (TID) and hidden Secret ID (SID) combine to match the generated PID value. So if you control your TID and SID through frame timing when setting up your save file to match one of these 25 IDs, your odds of a regular shiny encounter go up to 20% - this is just the effect of the cute charm glitch. 
+A Pokémon is shiny if your public Trainer ID (TID) and hidden Secret ID (SID) combine to match the generated PID value. So if you control your TID and SID through frame timing when setting up your save file to match one of these 25 PIDs, your odds of a regular shiny encounter go up to 20% - this is just the effect of the cute charm glitch. 
 
 ### The Developer Decision
 
-In the newer games (Gen 6 onward), Pokémon have a separate Encryption Constant (EC) in addition to their Personality Value (PID). On December 25th 2013, Pokémon released the Poké Transporter in Japan. It is a software that allowed you to move Pokémon from older generation games to their next generation. The key piece of the puzzle here was that Pokémon transferred to Generation VI via Poké Transporter **will have an encryption constant that is equal to its Personality Value**. An Encryption constant isn't re-generated and since I can control the Personality Value, I can control the Dunsparce! To get a 3-segment Dudunsparce, you need an encryption constant that is divisible by 100. i.e., division by 100 gives you a remainder of 0.
+In the newer games (Gen 6 onward), Pokémon have a separate Encryption Constant (EC) in addition to their Personality Value (PID). On December 25th 2013, Pokémon released the Poké Transporter in Japan. It is a software that allowed you to move Pokémon from older generation games to their next generation. The key piece of the puzzle here was that Pokémon transferred to Generation VI via Poké Transporter **will have an EC that is equal to its Personality Value**. An EC isn't regenerated and since I can control the Personality Value, I can control the Dunsparce! To get a 3-segment Dudunsparce, you need an EC that is divisible by 100. i.e., division by 100 gives you a remainder of 0.
 
 
-**For Dunsparce originating from Gen 6 Onwards:** 3-segment form is possible when
+**For Dunsparce originating from Gen 6 Onward:** 3-segment form is possible when
 
 ```
 Encryption_Constant modulo 100 = 0
 ```
 
-**For Dunsparce originating from Pre-Gen 6:** 3-segment form when
+**For Dunsparce originating from Pre-Gen 6:** 3-segment form occurs when
 
 ```
 PID modulo 100 = 0
@@ -60,7 +60,7 @@ Now, this is a bit of an elaborate way to get your shiny 3-segment Dudunsparce, 
 
 #### A quick Step by Step Overview
 
-1. (Optional but recommended) If you have two DS consoles and two games, catch a male Pokémon with Cute Charm and trade it to your other game. Jigglypuff from HGSS, or Cleffa/Lopunny from DPPt should also work. If you don't do this you have to play past the League to get a Cute Charm Pokémon (I believe).
-2. Follow any Cute Charm glitch tutorial, when you have to select a nature, select a nature from Group 1 (I chose 00000000 but that's not necessary).
+1. (Optional but recommended) If you have two DS consoles and two games, catch a male Pokémon with Cute Charm and trade it to your other game. Jigglypuff from HGSS or Cleffa/Lopunny from DPPt should also work. If you don't do this you have to play past the League to get a Cute Charm Pokémon (I believe).
+2. Follow any Cute Charm glitch tutorial, when you have to select a nature, select a nature from Group 1 (I chose 00000000).
 3. Complete the first Gym and the Team Rocket Slowpoke Well storyline.
 4. After your game has been set up, trade over your Cute Charm Pokémon, and then you can hunt for Dunsparce in the Dark Cave by using Rock Smash.
