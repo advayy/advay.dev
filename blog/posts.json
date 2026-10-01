@@ -1,4 +1,13 @@
-[
+[ {
+    "slug": "3-segment-dudunsparce",
+    "title": "Using old Pokémon Games to exploit the Impossible",
+    "date": "2026-09-26",
+    "displayDate": "Sep 202g",
+    "readTime": "7 min read",
+    "topic": "RNG Exploits",
+    "category": "Technical Discussion",
+    "excerpt": "Well not exactly impossible but odds of 1 in 409,600 are at the least improbable. In this post I aim to describe my process in trying to make these odds significantly more likely"
+  },
   {
     "slug": "a-mimic-bites-back",
     "title": "A Mimic Bites Back: Designing Stealth Around the Back-Bite",
