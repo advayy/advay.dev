@@ -28,6 +28,9 @@ Roughly speaking a Pokémon is shiny if the result of the XOR of the Trainer ID 
 
 In the newer games (Gen 6 onward), Pokémon have a separate Encryption Constant (EC) in addition to their Personality Value (PID). On December 25th 2013, Pokémon released the Poké Transporter in Japan. It is a software that allowed you to move Pokémon from older generation games to their next generation. The key piece of the puzzle here was that Pokémon transferred to Generation VI via Poké Transporter **will have an EC that is equal to its Personality Value**. An EC isn't regenerated and since I can control the Personality Value, I can control the Dunsparce! To get a 3-segment Dudunsparce, you need an EC that is divisible by 100. i.e., division by 100 gives you a remainder of 0.
 
+The EC is a 32-bit unsigned integer, separate from the PID, introduced in Generation VI. It serves as the seed for encrypting and decrypting a Pokémon’s data structure, and it also determines several cosmetic or form-based attributes. For example, it controls Spinda’s spot pattern and Wurmple’s evolution into Silcoon or Cascoon. In Gen 6 onward, the EC is generated randomly when the Pokémon is first created, with no in-game formula linking it to controllable values like nature or gender. Unlike the PID in Gen 4, you cannot target a specific EC through RNG manipulation in the newer games. **This is why the Poké Transporter loophole is essential: transferred Pokémon have their EC set equal to their PID, allowing indirect control over a value that would otherwise be out of reach.**
+
+
 **For Dunsparce originating from Gen 6 Onward:** 3-segment form is possible when
 
 ```
