@@ -1,4 +1,4 @@
-import"./callOnAll-DvltWELv.js";async function g(){const s=document.getElementById("blog-list");if(s)try{const[r,o]=await Promise.all([fetch("blog/posts.json"),fetch("assets/games.json")]),l=await r.json(),n=await o.json(),c=Object.fromEntries(n.map(e=>[e.id,e]));l.sort((e,t)=>new Date(t.date)-new Date(e.date)),s.innerHTML=l.map(e=>{const t=e.gameId?c[e.gameId]:null,i=t?`
+import"./callOnAll-DvltWELv.js";async function g(){const s=document.getElementById("blog-list");if(s)try{const[r,l]=await Promise.all([fetch("blog/posts.json"),fetch("assets/games.json")]),o=await r.json(),n=await l.json(),c=Object.fromEntries(n.map(e=>[e.id,e]));o.sort((e,t)=>new Date(t.date)-new Date(e.date)),s.innerHTML=o.map(e=>{const t=e.gameId?c[e.gameId]:null,i=t?`
         <a class="post-cartridge"
            href="${a(t.itchUrl)}"
            target="_blank"
@@ -13,7 +13,7 @@ import"./callOnAll-DvltWELv.js";async function g(){const s=document.getElementBy
         </a>
       `:"";return`
         <div class="blog-card">
-          <a class="blog-card-link" href="blog/post.html?slug=${encodeURIComponent(e.slug)}">
+          <a class="blog-card-link" href="blog/post?slug=${encodeURIComponent(e.slug)}">
             <div class="blog-card-text">
               ${e.category?`<span class="blog-category">${a(e.category)}</span>`:""}
               <h2>${a(e.title)}</h2>
