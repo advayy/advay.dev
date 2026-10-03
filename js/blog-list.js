@@ -34,7 +34,7 @@ async function loadPosts() {
 
       return `
         <div class="blog-card">
-          <a class="blog-card-link" href="blog/post.html?slug=${encodeURIComponent(post.slug)}">
+          <a class="blog-card-link" href="blog/post?slug=${encodeURIComponent(post.slug)}">
             <div class="blog-card-text">
               ${post.category ? `<span class="blog-category">${escapeHtml(post.category)}</span>` : ''}
               <h2>${escapeHtml(post.title)}</h2>

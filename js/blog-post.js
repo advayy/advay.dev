@@ -72,7 +72,7 @@ async function loadPost() {
       "datePublished": post.date,
       "author": { "@id": "https://advay.dev/#person" },
       "publisher": { "@id": "https://advay.dev/#person" },
-      "mainEntityOfPage": `https://advay.dev/blog/post.html?slug=${slug}`
+      "mainEntityOfPage": `https://advay.dev/blog/post?slug=${slug}`
       };
 
       const script = document.createElement('script');
