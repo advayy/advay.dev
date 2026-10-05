@@ -6,11 +6,11 @@ Two assumptions that 3D platformers usually get would not work in our game: that
 
 ## The camera does level-design work
 
-Wrapping the world around a trunk means the player loses track of how areas connect. They see nearby ledges and branching paths, however with no way to descern the right path ahead players can lose progress and become frustrated. The curvature of the tree makes mentally mapping the space significantly harder - furthermore, the player isnt able to experience the grandioseness of their journey, the path they have covered and that ahead. To deal with this we let the player pause and freely orbit the map.
+Wrapping the world around a trunk means the player loses track of how areas connect. They see nearby ledges and branching paths, however with no way to discern the right path ahead players can lose progress and become frustrated. The curvature of the tree makes mentally mapping the space significantly harder - furthermore, the player isnt able to experience the grandioseness of their journey, the path they have covered and that ahead. To deal with this we let the player pause and freely orbit the map.
 
 ![Pause Camera Mechanic](assets/blog-images/embark-pause-feat.png)
 
-The feature allowes the player to fully survey the area, so that their focus can shift to platforming and not guessing the correct path ahead. And because the player can now study the space, we could design routes that required studying.
+The feature allows the player to fully survey the area, so that their focus can shift to platforming and not guessing the correct path ahead. And because the player can now study the space, we could design routes that required studying.
 
 ## Abilities open routes, they don't gate progress
 
