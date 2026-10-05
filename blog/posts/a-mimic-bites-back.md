@@ -45,7 +45,7 @@ It also makes baiting possible at all. Baiting requires the player to predict wh
 
 The player throws a coin to create a sound. Enemies investigate.
 
-Baiting moves the enemy's attention towards the coin, which opens routes the player may not have been able to take before. Baiting does not come without risk however, first theres an HP cost, anf furthermore the enemy can fail to investigate if the coin lands too far away allowing them to turn back unpredictably.
+Baiting moves the enemy's attention towards the coin, which opens routes the player may not have been able to take before. Baiting does not come without risk however, first theres an HP cost, and furthermore the enemy can fail to investigate if the coin lands too far away allowing them to turn back unpredictably.
 
 To progress, the player still has to commit a risk: throw the coin, move immediately, and hope the path is clear before the enemy's attention returns.
 
@@ -89,4 +89,4 @@ The player chains together the systems:
 *Can I get behind them before they turn back?*
 *Is it worth the coin to shoot instead?*
 
-This allowes the player to develop they're own playstyle, stay engaged, and create their own attachment to the game.
+This allows the player to develop their own playstyle, stay engaged, and create their own attachment to the game.

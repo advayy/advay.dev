@@ -8,9 +8,9 @@ This jam theme was *"It's not a bug, it's a feature."* So, we took it literally:
 
 'Pocketing' removes a grid entity from the board. When the player places it back, it inherits the rotation of the placement.
 
-That one design element is also represented at the code level with all entities extending from the Pockateble interface. An enemy tower becomes your tower, a "Folder" that acts as an obstacle becomes your shield and an enemy projectile can be caught and thrown back at it.
+That one design element is also represented at the code level with all entities extending from the Pocketable interface. An enemy tower becomes your tower, a "Folder" that acts as an obstacle becomes your shield and an enemy projectile can be caught and thrown back at it.
 
-None of this is revealed directly. It's a property of the placement system, and the player finds it by accident. To push the player to discovery, some of the later levels are near impossible to solve without "breakding" the games mechanics, so to speak.
+None of this is revealed directly. It's a property of the placement system, and the player finds it by accident. To push the player to discovery, some of the later levels are near impossible to solve without "breaking" the games mechanics, so to speak.
 
 ![Gamebreaking Sample](assets/blog-images/pocket-gif-unsolveable.gif)
 

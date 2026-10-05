@@ -30,7 +30,6 @@ In the newer games (Gen 6 onward), Pokémon have a separate Encryption Constant 
 
 The EC is a 32-bit unsigned integer, separate from the PID, introduced in Generation VI. It serves as the seed for encrypting and decrypting a Pokémon’s data structure, and it also determines several cosmetic or form-based attributes. For example, it controls Spinda’s spot pattern and Wurmple’s evolution into Silcoon or Cascoon. In Gen 6 onward, the EC is generated randomly when the Pokémon is first created, with no in-game formula linking it to controllable values like nature or gender. Unlike the PID in Gen 4, you cannot target a specific EC through RNG manipulation in the newer games. **This is why the Poké Transporter loophole is essential: transferred Pokémon have their EC set equal to their PID, allowing indirect control over a value that would otherwise be out of reach.**
 
-
 **For Dunsparce originating from Gen 6 Onward:** 3-segment form is possible when
 
 ```
@@ -49,7 +48,7 @@ When you set up an RNG Cute Charm manipulation, you get to pick a group of natur
 
 You would need a **Group 1** PID with a **Male Lead** which includes the **Hardy** **nature**. Hardy nature Pokémon get the PID 00000000, which satisfies our equation. This means assuming your game is set up correctly and the EC is preserved through the transfer chain, you can guarantee that all Dunsparce that are shiny (due to cute charm) and have the Hardy nature will evolve into a 3-segment Dudunsparce when transferred to a compatible game.
 
-This method ends up beind significantly faster than catching several shiny Dunsparce in Scarlet and Violet, evolving to see if they're 3-Segment and resetting if they're not.
+This method ends up being significantly faster than catching several shiny Dunsparce in Scarlet and Violet, evolving to see if they're 3-Segment and resetting if they're not.
 
 ![Hardy Dunsparce](/assets/blog-images/dudunsparce-hgss.png)
 
