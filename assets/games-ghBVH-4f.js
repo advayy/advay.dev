@@ -1,4 +1,4 @@
-import"./callOnAll-DvltWELv.js";const l="assets/images/games/";async function c(){const s=document.getElementById("game-grid");if(s)try{const t=await(await fetch("assets/games.json")).json();s.innerHTML=t.map(e=>{const r=`${l}${e.id}.png`;return`
+import"./callOnAll-ChkeiO1R.js";const l="assets/images/games/";async function c(){const s=document.getElementById("game-grid");if(s)try{const t=await(await fetch("assets/games.json")).json();s.innerHTML=t.map(e=>{const r=`${l}${e.id}.png`;return`
         <a class="game-cell"
            href="${a(e.itchUrl)}"
            target="_blank"
