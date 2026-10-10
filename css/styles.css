@@ -1949,7 +1949,7 @@ footer {
 
 .post-cartridge-image {
   flex-shrink: 0;
-  height: 42px;
+  /* height: 42px; */
   overflow: hidden;
   background: #1a1512;
 }
