@@ -1329,9 +1329,9 @@ footer {
   flex-direction: column;
   flex-grow: 1;
   overflow: hidden;
-  box-shadow:
-    inset 3px 0 4px -1px rgba(0, 0, 0, 0.35),
-    inset -3px 0 4px -1px rgba(0, 0, 0, 0.35);
+  box-shadow: none;
+    /* inset 3px 0 4px -1px rgba(0, 0, 0, 0.35),
+    inset -3px 0 4px -1px rgba(0, 0, 0, 0.35); */
 }
 
 .game-info h3 {
