@@ -10,7 +10,7 @@ export default defineConfig({
         main:     resolve(__dirname, "index.html"),
         about:    resolve(__dirname, "about.html"),
         projects: resolve(__dirname, "projects.html"),
-        art:      resolve(__dirname, "art.html"),
+        fun:      resolve(__dirname, "fun.html"),
         games:    resolve(__dirname, "games.html"),
         blog:     resolve(__dirname, "blog.html"),
         post:     resolve(__dirname, "blog/post.html"),

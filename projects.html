@@ -4,36 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Advay.dev</title>
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="css/styles.css">
-<meta name="color-scheme" content="light only">
-<meta name="supported-color-schemes" content="light only">
-<meta name="description" content="Software and game development projects by Advay Rajguru, including MyMediaBox, a local-first media tracker, and a custom 2D game engine.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Advay Rajguru — Game Developer & Software Engineer">
-<meta property="og:description" content="Game developer and software engineer based in Vancouver.">
-<meta property="og:url" content="https://advay.dev/projects">
-<link rel="canonical" href="https://advay.dev/projects">
-<meta property="og:image" content="https://advay.dev/assets/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
+  <meta name="description" content="Software and game development projects by Advay Rajguru, including MyMediaBox, a local-first media tracker, and a custom 2D game engine.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Advay Rajguru — Game Developer & Software Engineer">
+  <meta property="og:description" content="Game developer and software engineer based in Vancouver.">
+  <meta property="og:url" content="https://advay.dev/projects">
+  <link rel="canonical" href="https://advay.dev/projects">
+  <meta property="og:image" content="https://advay.dev/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <header>
   <div class="nav-container">
     <a href="/" class="site-logo">
-<img src="assets/favicon.png" alt="" class="site-logo-img">
+      <img src="assets/favicon.png" alt="" class="site-logo-img">
       <span class="site-title">Advay.dev</span>
     </a>
     <nav id="navbar">
-      <a href="/" >Home</a>
+      <a href="/">Home</a>
       <a href="about">About Me</a>
       <a href="games">Games</a>
       <a href="projects" class="active">Projects</a>
-      <a href="art">Art</a>
-      <a href="blog">Blog</a>
+      <a href="blog">Blog</a>      
+      <a href="fun">Fun</a>
     </nav>
   </div>
 </header>
+
 <main>
   <section id="Page-Title">
     <h1>Projects</h1>
@@ -42,89 +43,176 @@
   <section id="projects">
     <div class="project-grid">
 
-      <div class="project-card outer-cut-corner">
-      <div class="inner-cut-corner">
-        <img src="assets/images/mymediabox.png" alt="MyMediaBox Preview" class="project-image outlined-image" />
-        <h3>MyMediaBox</h3>
-        <p class="project-date">Aug 2026 – Present</p>
-        <p class="project-tech">Tauri, React, TypeScript, Rust, SQLite</p>
-        <p>A local-first TV and movie tracker built around fast episode checking, one-click watchlists, and data that stays on your own computer. Uses TMDB for metadata but keeps watch history, ratings, and backups fully local via SQLite. Distributed as native desktop builds for macOS, Windows, and Linux via a GitHub Actions CI/CD pipeline.</p>
-        <a href="https://github.com/advayy/MyMediaBox/releases" target="_blank" rel="noopener noreferrer">View Releases</a>
-      </div>
-    </div>
-
-      <div class="project-card outer-cut-corner">
-        <div class="inner-cut-corner">
-          <img src="assets/images/voxel-terrain.png" alt="Voxel Terrain Preview" class="project-image outlined-image" />
-          <h3>Voxel Terrain Engine</h3>
-          <p class="project-date">Jan. 2026 – Feb. 2026</p>
-          <p class="project-tech">Unity, C#</p>
-          <p>Real-time voxel terrain sculpting and deformation using a signed density field and Marching Cubes mesh extraction. Features a designer-facing editor workflow for authoring and hot-reloading destructible worlds, deployed to WebGL.</p>
-          <a href="https://github.com/advayy" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-
-      <div class="project-card outer-cut-corner">
-        <div class="inner-cut-corner">
-          <img src="assets/images/amoebash.png" alt="Amoebash Preview" class="project-image outlined-image" />
-          <h3>Amoebash — 2D Game Engine</h3>
-          <p class="project-date">Jan. 2025 – Apr. 2025</p>
-          <p class="project-tech">C++, OpenGL, SDL2, FreeType</p>
-          <p>Custom 2D game engine built from scratch with modular ECS architecture, SAT collision detection, procedural level generation, and instanced tile and particle rendering. Shipped a proof-of-concept rogue-like with a 6-person team — placed 2nd out of 26 teams, judged by industry professionals.</p>
-          <div class="project-links">
-            <a href="https://advay-rajguru.itch.io/amoebash" target="_blank">Play on Itch.io</a>
-            <a href="https://github.com/advayy/Amoebash" target="_blank">View on GitHub</a>
+      <!-- Project 1: MyMediaBox -->
+      <article class="project-folder" tabindex="0" 
+               data-title="MyMediaBox" 
+               data-image="assets/images/mymediabox.png" 
+               data-stack="Tauri, React, TypeScript, Rust, SQLite" 
+               data-date="Aug 2026 – Present" 
+               data-description="A local-first TV and movie tracker built around fast episode checking, one-click watchlists, and data that stays on your own computer. Uses TMDB for metadata but keeps watch history, ratings, and backups fully local via SQLite. Distributed as native desktop builds for macOS, Windows, and Linux via a GitHub Actions CI/CD pipeline."
+               data-link="https://github.com/advayy/MyMediaBox/releases" 
+               data-link-text="View Releases">
+        <div class="folder-body">
+          <div class="folder-image-wrapper">
+            <img src="assets/images/mymediabox.png" alt="MyMediaBox Preview" loading="lazy">
+          </div>
+          <div class="folder-info">
+            <h3>MyMediaBox</h3>
+            <p class="folder-tech">Tauri, React, TypeScript, Rust, SQLite</p>
+            <p class="folder-date">Aug 2026 – Present</p>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card outer-cut-corner">
-        <div class="inner-cut-corner">
-          <img src="assets/images/hyperscreen.png" alt="HyperScreen Preview" class="project-image outlined-image" />
-          <h3>HyperScreen</h3>
-          <p class="project-date">Jan. 2025 – Apr. 2025</p>
-          <p class="project-tech">Django, Next.js, PostgreSQL, Docker</p>
-          <p>Full-stack recruiting platform built for Amazon with a team of 8. Features asynchronous resume evaluation, full-text fuzzy search, and a screening pipeline that reduced recruiter review time by 50%.</p>
-          <a href="https://github.com/CPSC319-2025/Team-4-Amazon" target="_blank">View on GitHub</a>
+      <!-- Project 2: Voxel Terrain Engine -->
+      <article class="project-folder" tabindex="0" 
+               data-title="Voxel Terrain Engine" 
+               data-image="assets/images/voxel-terrain.png" 
+               data-stack="Unity, C#" 
+               data-date="Jan. 2026 – Feb. 2026" 
+               data-description="Real-time voxel terrain sculpting and deformation using a signed density field and Marching Cubes mesh extraction. Features a designer-facing editor workflow for authoring and hot-reloading destructible worlds, deployed to WebGL."
+               data-link="https://github.com/advayy" 
+               data-link-text="View on GitHub">
+        <div class="folder-body">
+          <div class="folder-image-wrapper">
+            <img src="assets/images/voxel-terrain.png" alt="Voxel Terrain Preview" loading="lazy">
+          </div>
+          <div class="folder-info">
+            <h3>Voxel Terrain Engine</h3>
+            <p class="folder-tech">Unity, C#</p>
+            <p class="folder-date">Jan. 2026 – Feb. 2026</p>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card outer-cut-corner">
-        <div class="inner-cut-corner">
-          <img src="assets/images/model-viewer.png" alt="3D Model Viewer Preview" class="project-image outlined-image" />
-          <h3>3D Model Viewer</h3>
-          <p class="project-date">Feb. 2025</p>
-          <p class="project-tech">JavaScript, OpenGL, GLSL</p>
-          <p>A 3D model viewer showcasing original models alongside custom GLSL shaders.</p>
+      <!-- Project 3: Amoebash -->
+      <article class="project-folder" tabindex="0" 
+               data-title="Amoebash — 2D Game Engine" 
+               data-image="assets/images/amoebash.png" 
+               data-stack="C++, OpenGL, SDL2, FreeType" 
+               data-date="Jan. 2025 – Apr. 2025" 
+               data-description="Custom 2D game engine built from scratch with modular ECS architecture, SAT collision detection, procedural level generation, and instanced tile and particle rendering. Shipped a proof-of-concept rogue-like with a 6-person team — placed 2nd out of 26 teams, judged by industry professionals."
+               data-link="https://advay-rajguru.itch.io/amoebash" 
+               data-link-text="Play on Itch.io">
+        <div class="folder-body">
+          <div class="folder-image-wrapper">
+            <img src="assets/images/amoebash.png" alt="Amoebash Preview" loading="lazy">
+          </div>
+          <div class="folder-info">
+            <h3>Amoebash</h3>
+            <p class="folder-tech">C++, OpenGL, SDL2, FreeType</p>
+            <p class="folder-date">Jan. 2025 – Apr. 2025</p>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card outer-cut-corner">
-        <div class="inner-cut-corner">
-          <img src="assets/images/music-festival.png" alt="Music Festival Manager Preview" class="project-image outlined-image" />
-          <h3>Music Festival Manager</h3>
-          <p class="project-date">Jul. 2023 – Aug. 2023</p>
-          <p class="project-tech">Oracle SQL, PHP, HTML</p>
-          <p>A database management system for organizing and querying music festival data, built on a relational Oracle SQL backend with a PHP frontend.</p>
-          <a href="https://github.com/advayy/MusicFestivalManager" target="_blank">View on GitHub</a>
+      <!-- Project 4: HyperScreen -->
+      <article class="project-folder" tabindex="0" 
+               data-title="HyperScreen" 
+               data-image="assets/images/hyperscreen.png" 
+               data-stack="Django, Next.js, PostgreSQL, Docker" 
+               data-date="Jan. 2025 – Apr. 2025" 
+               data-description="Full-stack recruiting platform built for Amazon with a team of 8. Features asynchronous resume evaluation, full-text fuzzy search, and a screening pipeline that reduced recruiter review time by 50%."
+               data-link="https://github.com/CPSC319-2025/Team-4-Amazon" 
+               data-link-text="View on GitHub">
+        <div class="folder-body">
+          <div class="folder-image-wrapper">
+            <img src="assets/images/hyperscreen.png" alt="HyperScreen Preview" loading="lazy">
+          </div>
+          <div class="folder-info">
+            <h3>HyperScreen</h3>
+            <p class="folder-tech">Django, Next.js, PostgreSQL, Docker</p>
+            <p class="folder-date">Jan. 2025 – Apr. 2025</p>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card outer-cut-corner">
-        <div class="inner-cut-corner">
-          <h3>Full-Stack Querying Application</h3>
-          <p class="project-date">Sep. 2023 – Nov. 2023</p>
-          <p class="project-tech">JavaScript, React, Vuetify, Node.js, Express</p>
-          <p>Query engine for dataset analysis built on a recursive tree structure, with a RESTful Node.js backend and a Vuetify frontend.</p>
-          <a href="https://github.com/advayy/CPSC310-Project" target="_blank">View on GitHub</a>
+      <!-- Project 5: 3D Model Viewer -->
+      <article class="project-folder" tabindex="0" 
+               data-title="3D Model Viewer" 
+               data-image="assets/images/model-viewer.png" 
+               data-stack="JavaScript, OpenGL, GLSL" 
+               data-date="Feb. 2025" 
+               data-description="A 3D model viewer showcasing original models alongside custom GLSL shaders."
+               data-link="" 
+               data-link-text="">
+        <div class="folder-body">
+          <div class="folder-image-wrapper">
+            <img src="assets/images/model-viewer.png" alt="3D Model Viewer Preview" loading="lazy">
+          </div>
+          <div class="folder-info">
+            <h3>3D Model Viewer</h3>
+            <p class="folder-tech">JavaScript, OpenGL, GLSL</p>
+            <p class="folder-date">Feb. 2025</p>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <!-- Project 6: Music Festival Manager -->
+      <article class="project-folder" tabindex="0" 
+               data-title="Music Festival Manager" 
+               data-image="assets/images/music-festival.png" 
+               data-stack="Oracle SQL, PHP, HTML" 
+               data-date="Jul. 2023 – Aug. 2023" 
+               data-description="A database management system for organizing and querying music festival data, built on a relational Oracle SQL backend with a PHP frontend."
+               data-link="https://github.com/advayy/MusicFestivalManager" 
+               data-link-text="View on GitHub">
+        <div class="folder-body">
+          <div class="folder-image-wrapper">
+            <img src="assets/images/music-festival.png" alt="Music Festival Manager Preview" loading="lazy">
+          </div>
+          <div class="folder-info">
+            <h3>Music Festival Manager</h3>
+            <p class="folder-tech">Oracle SQL, PHP, HTML</p>
+            <p class="folder-date">Jul. 2023 – Aug. 2023</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 7: Full-Stack Querying Application (Blank Preview) -->
+      <article class="project-folder" tabindex="0" 
+               data-title="Full-Stack Querying Application" 
+               data-image="" 
+               data-stack="JavaScript, React, Vuetify, Node.js, Express" 
+               data-date="Sep. 2023 – Nov. 2023" 
+               data-description="Query engine for dataset analysis built on a recursive tree structure, with a RESTful Node.js backend and a Vuetify frontend."
+               data-link="https://github.com/advayy/CPSC310-Project" 
+               data-link-text="View on GitHub">
+        <div class="folder-body">
+          <div class="folder-image-wrapper empty-preview">
+            <!-- Empty for now -->
+          </div>
+          <div class="folder-info">
+            <h3>Full-Stack Querying App</h3>
+            <p class="folder-tech">JS, React, Node.js, Express</p>
+            <p class="folder-date">Sep. 2023 – Nov. 2023</p>
+          </div>
+        </div>
+      </article>
 
     </div>
   </section>
 </main>
 
+<!-- The Modal (Dialog) -->
+<dialog id="project-modal" class="project-dialog">
+  <div class="dialog-header">
+    <h2 id="dialog-title"></h2>
+    <button id="dialog-close" aria-label="Close dialog">&times;</button>
+  </div>
+  <div class="dialog-content">
+    <img id="dialog-image" src="" alt="">
+    <div class="dialog-meta">
+      <p id="dialog-date" class="dialog-date"></p>
+      <p id="dialog-stack" class="dialog-stack"></p>
+    </div>
+    <p id="dialog-description"></p>
+    <a id="dialog-link" href="#" target="_blank" rel="noopener noreferrer" class="dialog-link">View Project</a>
+  </div>
+</dialog>
+
 <script type="module" src="js/callOnAll.js"></script>
+<script src="js/projects.js"></script>
 
 <footer>
   <ul class="footer-links">

@@ -628,6 +628,176 @@ footer {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
+/* --- Projects Section Layout --- */
+#projects {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px 30px;
+}
+
+/* --- Mac-Style Folder Card --- */
+.project-folder {
+  --front-light: #bfe5ff; 
+  --front-dark: #a9e2ff;
+  --back: #82d4f7;
+  
+  --radius: 14px;
+  --tab-width: 35%;
+  --tab-height: 16px;
+  --peek: 12px;
+
+  position: relative;
+  margin-top: var(--tab-height);
+  background: var(--back);
+  border-radius: var(--radius);
+  padding-top: var(--peek); 
+  
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-folder:hover,
+.project-folder:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+/* 1. The Tab (Top Left) */
+.project-folder::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--tab-height) * -1);
+  left: 0;
+  width: var(--tab-width);
+  height: var(--tab-height);
+  background-color: var(--back);
+  border-radius: var(--radius) var(--radius) 0 0;
+  z-index: 4;
+}
+
+/* 2. The Smooth Concave Curve */
+.project-folder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  /* left: var(--tab-width); */
+  width: var(--peek); 
+  height: var(--peek);
+  background: var(--back);
+  /* border-bottom-left-radius: var(--peek); */
+  z-index: 3;
+}
+
+/* 3. The Main Body (Front Layer) */
+.folder-body {
+  background: linear-gradient(180deg, var(--front-light) 0%, var(--front-dark) 100%);
+  border-radius: 0 var(--radius) var(--radius) var(--radius);
+  padding: 16px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* FIX FOR INCONSISTENT IMAGES */
+.folder-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  background: rgba(0, 0, 0, 0.06); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.folder-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-folder:hover .folder-image-wrapper img {
+  transform: scale(1.03);
+}
+
+.folder-image-wrapper.empty-preview {
+  background: rgba(0, 0, 0, 0.04); 
+}
+
+/* Text Formatting */
+.folder-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  color: #1a1a1a; 
+  font-family: var(--font-heading);
+}
+
+.folder-tech {
+  margin: 0 0 6px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.folder-date {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* --- Modal (Dialog) Styling --- */
+.project-dialog {
+  border: none;
+  border-radius: 16px;
+  padding: 0;
+  max-width: 600px;
+  width: 90vw;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  background: #fff;
+}
+
+.project-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #cceeff; 
+}
+
+.dialog-header h2 { margin: 0; font-size: 1.2rem; color: #1a1a1a; }
+#dialog-close { background: none; border: none; color: #1a1a1a; font-size: 2rem; cursor: pointer; line-height: 1; padding: 0; }
+
+.dialog-content { padding: 20px; }
+.dialog-content img { width: 100%; border-radius: 8px; margin-bottom: 16px; display: none; }
+.dialog-content img[src]:not([src=""]) { display: block; }
+.dialog-meta { font-size: 0.9rem; color: #666; margin-bottom: 12px; }
+.dialog-date { font-weight: bold; color: #333; margin: 0 0 4px 0; }
+.dialog-stack { margin: 0; font-weight: 600; }
+.dialog-link { display: inline-block; margin-top: 16px; padding: 8px 16px; background: #82d4f7; color: #1a1a1a; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s; }
+.dialog-link:hover { background: #5bc2f9; }
+
 /* ============================================
    CUT CORNER CARDS
    ============================================ */
