@@ -1,0 +1,95 @@
+[
+  {
+    "title": "PyMicrogame Jam Framework",
+    "image": "assets/images/pymicrogamejam.png",
+    "stack": "Python, pygame-ce",
+    "date": "Nov. 2026 – Present",
+    "description": "A forkable framework for running your own microgame jam: edit a config file for branding, colours, and lives, drop submissions into games/, and a shared Python host handles rendering, input, audio, scoring, timing, and win/lose state for every entry. Ships with a jammer-facing template, three example games, and an asset-registry generator, so organizers never have to write a host engine from scratch. Built for BUSGDA and being prepared for a future jam.",
+    "link": "",
+    "linkText": ""
+  },
+  {
+    "title": "Can I Survive?",
+    "image": "assets/images/can-i-survive.png",
+    "stack": "JavaScript, HTML, CSS",
+    "date": "Aug. 2026 – Present",
+    "description": "A browser-based financial resilience simulator: sketch out a rough picture of your finances, then watch a possible life unfold month by month. Models work, promotions, layoffs, spending, housing, debt, simplified Canadian taxes, retirement income, stochastic markets and inflation, mortgage renewals, and named life events across Baseline, Life Events, and Monte Carlo modes, with historical stress analogues and sensitivity analysis. The useful output is the shape and margin of a plan under explicit assumptions, not a single dollar prediction.",
+    "link": "https://advayy.github.io/can-i-survive/",
+    "linkText": "Play in Browser"
+  },
+  {
+    "title": "MyMediaBox",
+    "image": "assets/images/mymediabox.png",
+    "stack": "Tauri, React, TypeScript, Rust, SQLite",
+    "date": "Aug 2026 – Present",
+    "description": "A local-first TV and movie tracker built around fast episode checking, one-click watchlists, and data that stays on your own computer. Uses TMDB for metadata but keeps watch history, ratings, and backups fully local via SQLite. Distributed as native desktop builds for macOS, Windows, and Linux via a GitHub Actions CI/CD pipeline.",
+    "link": "https://github.com/advayy/MyMediaBox/releases",
+    "linkText": "View Releases"
+  },
+  {
+    "title": "Voxel Terrain Engine",
+    "image": "assets/images/voxel-terrain.png",
+    "stack": "Unity, C#",
+    "date": "Jan. 2026 – Feb. 2026",
+    "description": "Real-time voxel terrain sculpting and deformation using a signed density field and Marching Cubes mesh extraction. Features a designer-facing editor workflow for authoring and hot-reloading destructible worlds, deployed to WebGL.",
+    "link": "https://github.com/advayy",
+    "linkText": "View on GitHub"
+  },
+  {
+    "title": "Amoebash",
+    "modalTitle": "Amoebash — 2D Game Engine",
+    "image": "assets/images/amoebash.png",
+    "stack": "C++, OpenGL, SDL2, FreeType",
+    "date": "Jan. 2025 – Apr. 2025",
+    "description": "Custom 2D game engine built from scratch with modular ECS architecture, SAT collision detection, procedural level generation, and instanced tile and particle rendering. Shipped a proof-of-concept rogue-like with a 6-person team — placed 2nd out of 26 teams, judged by industry professionals.",
+    "link": "https://advay-rajguru.itch.io/amoebash",
+    "linkText": "Play on Itch.io"
+  },
+  {
+    "title": "HyperScreen",
+    "image": "assets/images/hyperscreen.png",
+    "stack": "Django, Next.js, PostgreSQL, Docker",
+    "date": "Jan. 2025 – Apr. 2025",
+    "description": "Full-stack recruiting platform built for Amazon with a team of 8. Features asynchronous resume evaluation, full-text fuzzy search, and a screening pipeline that reduced recruiter review time by 50%.",
+    "link": "https://github.com/CPSC319-2025/Team-4-Amazon",
+    "linkText": "View on GitHub"
+  },
+  {
+    "title": "3D Model Viewer",
+    "image": "assets/images/model-viewer.png",
+    "stack": "JavaScript, OpenGL, GLSL",
+    "date": "Feb. 2025",
+    "description": "A 3D model viewer showcasing original models alongside custom GLSL shaders.",
+    "link": "",
+    "linkText": ""
+  },
+  {
+    "title": "Music Festival Manager",
+    "image": "assets/images/music-festival.png",
+    "stack": "Oracle SQL, PHP, HTML",
+    "date": "Jul. 2023 – Aug. 2023",
+    "description": "A database management system for organizing and querying music festival data, built on a relational Oracle SQL backend with a PHP frontend.",
+    "link": "https://github.com/advayy/MusicFestivalManager",
+    "linkText": "View on GitHub"
+  },
+  {
+    "title": "Full-Stack Querying App",
+    "modalTitle": "Full-Stack Querying Application",
+    "image": "",
+    "cardStack": "JS, React, Node.js, Express",
+    "stack": "JavaScript, React, Vuetify, Node.js, Express",
+    "date": "Sep. 2023 – Nov. 2023",
+    "description": "Query engine for dataset analysis built on a recursive tree structure, with a RESTful Node.js backend and a Vuetify frontend.",
+    "link": "https://github.com/advayy/CPSC310-Project",
+    "linkText": "View on GitHub"
+  },
+  {
+    "title": "Dress Me!",
+    "image": "assets/images/dress-me.png",
+    "stack": "Java, Java Swing",
+    "date": "2022",
+    "description": "A pixel-art wardrobe manager that records the clothing you own by type and colour, saves and loads multiple wardrobes, and proposes outfit pairings. Styled after the closet computer from Clueless (1995) — hand-drawn sprites per clothing category, rectangular pixel buttons, and a replicated splash screen. Started as a CPSC210 personal project and grew well past its original specification.",
+    "link": "https://github.com/advayy/Dress-Me",
+    "linkText": "View on GitHub"
+  }
+]
