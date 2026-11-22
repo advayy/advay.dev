@@ -10,7 +10,7 @@
   },
   {
     "title": "Can I Survive?",
-    "image": "assets/images/can-i-survive.png",
+    "image": "assets/images/Can-i-survive.png",
     "stack": "JavaScript, HTML, CSS",
     "date": "Aug. 2026 – Present",
     "description": "A browser-based financial resilience simulator: sketch out a rough picture of your finances, then watch a possible life unfold month by month. Models work, promotions, layoffs, spending, housing, debt, simplified Canadian taxes, retirement income, stochastic markets and inflation, mortgage renewals, and named life events across Baseline, Life Events, and Monte Carlo modes, with historical stress analogues and sensitivity analysis. The useful output is the shape and margin of a plan under explicit assumptions, not a single dollar prediction.",
